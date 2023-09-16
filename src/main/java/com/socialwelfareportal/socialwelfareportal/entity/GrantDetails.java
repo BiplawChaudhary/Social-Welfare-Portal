@@ -8,7 +8,8 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "grant_details")
+@Table(name = "" +
+        "grant_details")
 @Getter
 @Setter
 public class GrantDetails {
@@ -25,6 +26,10 @@ public class GrantDetails {
     private Integer noOfIndividual;
 
     private Status status;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
     public GrantDetails() {
 
