@@ -1,10 +1,15 @@
 package com.socialwelfareportal.socialwelfareportal.entity;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
 @Table(name = "grant_details")
+@Getter
+@Setter
 public class GrantDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
