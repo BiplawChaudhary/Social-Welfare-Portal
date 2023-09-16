@@ -8,14 +8,13 @@ import java.util.List;
 
 public interface GrantRequestService {
 
-    List<GrantDetails> getAllGrants();
+    List<GrantResponseDto> getAllGrants();
 
     GrantResponseDto findGrantById(Integer id);
 
     GrantResponseDto requestForGrant(GrantRequestDto dto);
 
-    GrantResponseDto cancelTheRequest(Integer id);
+    void cancelTheRequest(Integer id);
 
     GrantResponseDto updateTheRequest(Integer id, GrantRequestDto dto);
-
 }

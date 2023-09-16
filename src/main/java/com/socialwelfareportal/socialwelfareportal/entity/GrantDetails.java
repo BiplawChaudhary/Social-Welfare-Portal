@@ -1,5 +1,6 @@
 package com.socialwelfareportal.socialwelfareportal.entity;
 
+import com.socialwelfareportal.socialwelfareportal.dto.requestdto.GrantRequestDto;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -24,4 +25,15 @@ public class GrantDetails {
     private Integer noOfIndividual;
 
     private Status status;
+
+    public GrantDetails(GrantRequestDto dto){
+        this.fiscalYear = dto.getFiscalYear();
+        this.description = dto.getDescription();
+        this.name = dto.getName();
+        this.noOfIndividual = dto.getNoOfIndividual();
+    }
+
+    public GrantDetails() {
+
+    }
 }
