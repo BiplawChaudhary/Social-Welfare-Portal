@@ -39,4 +39,9 @@ public class VolunteerController {
         volunteerService.createVolunteer(volunteerRequestDto);
         return "redirect:/events";
     }
+
+    @GetMapping("/volunteer")
+    public String volunteer(){
+        return "/main/volunteer/volunteering";
+    }
 }
