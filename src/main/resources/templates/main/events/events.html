@@ -10,7 +10,27 @@
 <!--*********************  Header  **************************-->
 <div th:replace="main/fragments/headerFooter :: header"></div>
 
-<h1>Events</h1>
+<h1>All Events</h1>
+<table>
+    <thead>
+    <tr>
+        <th>SN</th>
+        <th>Event Name</th>
+        <th>Date</th>
+        <th>Event Location</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="event, iStat:${events}">
+        <td th:text="${iStat.index + 1}"></td>
+        <td th:text="${event.name}"></td>
+        <td th:text="${event.date}"></td>
+        <td th:text="${event.eventLocation}"></td>
+        <td th:text="${event.description}"></td>
+    </tr>
+    </tbody>
+</table>
 
 <!--*********************  Footer  **************************-->
 <div th:replace="main/fragments/headerFooter :: footer"></div>

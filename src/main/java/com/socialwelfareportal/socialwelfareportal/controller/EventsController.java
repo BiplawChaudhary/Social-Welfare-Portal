@@ -21,7 +21,8 @@ public class EventsController {
 
     //Route that returns events page
     @GetMapping("/events")
-    public String returnEvents(){
+    public String returnEvents(Model model){
+        model.addAttribute("events",eventService.getAllEvents());
         return "/main/events/events";
     }
 
