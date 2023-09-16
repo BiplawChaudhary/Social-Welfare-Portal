@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Donate</title>
+</head>
+<body>
+
+
+<!--*********************  Header  **************************-->
+<div th:replace="main/fragments/headerFooter :: header"></div>
+<form th:action="@{/pay}" method="post" th:object="${donationDto}">
+    <input type="hidden" id="currentDateTime" name="currentDateTime" th:value="${currentDateTime}">
+    <label>Name:</label><input type="text" th:field="*{donor}"><br>
+    <label>Contact:</label><input type="text" th:field="*{phone}"><br>
+    <label>Email:</label><input type="text" th:field="*{email}"><br>
+    <label>Amount:</label><input type="text" th:field="*{price}"><br>
+    <input type="submit" value="Donate">
+</form>
+<!--*********************  Footer  **************************-->
+<div th:replace="main/fragments/headerFooter :: footer"></div>
+
+</body>
+
+
+
+
+<!--****************** Header **************************&ndash;&gt;-->
+<!--<div th:replace="main/fragments/header :: header"-->
+<!--     th:with="allCategory : ${allCategory}, cartValue : ${cartValue} "></div>-->
+</html>

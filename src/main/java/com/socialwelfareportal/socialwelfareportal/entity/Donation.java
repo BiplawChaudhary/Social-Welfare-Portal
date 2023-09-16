@@ -23,10 +23,8 @@ public class Donation {
 
     private String email;
 
-    private Integer quantiy;
+    private Integer amount;
 
     private String description;
-
-    private String type;
 
 }
