@@ -32,11 +32,13 @@
         }
     </style>
     <title>Social Welfare Portal</title>
+    <link rel="stylesheet" href="../../../static/css/index.css">
 </head>
 <body>
 <!--    HEADER          -->
     <div th:replace="/main/fragments/headerFooter::header"></div>
 
+<!-- //main Content -->
 <!-- //main Content -->
 <main>
     <section class="firstPart">
@@ -46,7 +48,87 @@
             <h4>This is text file</h4>
         </section> -->
     </section>
+
+
+    <!-- //Involved Ngos Card -->
+    <section class="involvedNgo">
+        <h2 style="text-align: center;">Involved NGOs</h2>
+        <section class="cards">
+            <section class="card">
+                <img src="/img/aama samuha.png" alt="">
+            </section>
+
+            <section class="card">
+                <img src="/img/aama samuha.png" alt="">
+            </section>
+
+            <section class="card">
+                <img src="/img/aama samuha.png" alt="">
+            </section>
+        </section>
+    </section>
+
+
+    <!-- Involved Areas Card -->
+    <section class="involvedAreas">
+        <h2 style="text-align:center;">Involved Areas</h2>
+
+        <section class="areaCards">
+            <section class="areaCard">
+                <img src="/img/action aid.png" alt="Some Action">
+
+                <section class="areaText">
+                    <h3>Disaster Management</h3>
+                    <p>Lorem Ipsum</p>
+                </section>
+            </section>
+
+            <section class="areaCard">
+                <img src="/img/action aid.png" alt="Some Action">
+
+                <section class="areaText">
+                    <h3>Disaster Management</h3>
+                    <p>Lorem Ipsum</p>
+                </section>
+            </section>
+
+
+        </section>
+
+
+        <a href=""><button>View More -></button></a>
+    </section>
+
+
+    <!-- //Stats Collected -->
+    <section class="statsDetail">
+        <h2 style="text-align: center;">Statistical Details</h2>
+
+        <section class="statsCards">
+
+            <section class="statsCard">
+                <h3>Rs. <span>10000</span></h3>
+                <p>Donation Collected</p>
+            </section>
+
+            <section class="statsCard">
+                <h3><span>500</span>+</h3>
+                <p>NGOs Connected</p>
+            </section>
+        </section>
+    </section>
+
+
+    <section class="browse">
+        <h2>IF YOU WANT TO KNOW MORE ABOUT OUR WORKS</h2>
+        <h2>OR</h2>
+        <h2>WANT TO HELP US, FEEL FREE TO BROWSE</h2>
+
+        <a href=""> <button>Browse Here</button></a>
+    </section>
+
 </main>
+
 
 
 <!--FOOTER-->

@@ -1,48 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Grant Request Page</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/headerFooter.css">
+
 </head>
+
 <body>
-<!--*********************  Header  **************************-->
-<div th:replace="main/fragments/headerFooter :: header"></div>
 
-<h1>Grant Request Form</h1>
-
-<form th:action="@{/grant/register}" method="post" enctype="multipart/form-data" th:object="${grantdto}">
-<!--    Fiscal year-->
-    <fieldset>
-        <label>Fiscal Year</label>
-        <select th:field="*{fiscalYear}">
-            <option value="2079/80">2079/80</option>
-            <option value="2078/79">2078/79</option>
-            <option value="2077/78">2077/78</option>
-        </select>
-    </fieldset>
-
-    <fieldset>
-        <label>Name</label>
-        <input type="text" th:field="*{name}">
-    </fieldset>
-
-    <fieldset>
-        <label>Description</label>
-        <input type="text" th:field="*{description}">
-    </fieldset>
-
-    <fieldset>
-        <lable>Upload your proposol: </lable>
-        <input type="file" placeholder="Upload your proposol" name="file">
-    </fieldset>
+        <!--*********************  Header  **************************-->
+        <div th:replace="main/fragments/headerFooter :: header"></div>
 
 
+       <main style="margin:5em 10em">
+           <h1>Register for Governnment Aid</h1>
 
-    <input type="submit">
-</form>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus enim expedita repellat ullam unde. Aut culpa, impedit. Assumenda culpa cupiditate id, in ipsa iure natus nulla officiis sit totam voluptatum!</p>
+
+           <section class="form" style="margin:5em 20em">
+               <form action="" method="">
+                   <div class="form-group">
+                       <label for="exampleInputEmail1">Email address</label>
+                       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                       <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                   </div>
+                   <div class="form-group">
+                       <label for="exampleInputPassword1">Password</label>
+                       <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                   </div>
+                   <div class="form-check">
+                       <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                       <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                   </div>
+                   <button type="submit" class="btn btn-primary">Submit</button>
+               </form>
+           </section>
+       </main>
+
+        <!--*********************  Footer  **************************-->
+        <div th:replace="main/fragments/headerFooter :: footer"></div>
 
 
-<!--*********************  Footer  **************************-->
-<div th:replace="main/fragments/headerFooter :: footer"></div>
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 </html>

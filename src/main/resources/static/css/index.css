@@ -6,3 +6,51 @@
     align-items: center;
     margin-top: 3em;
 } */
+
+.involvedNgo, .involvedArea, .browse{
+    padding:1em;
+    box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.8);
+    margin:1em;
+    border-radius: 1em;
+}
+.cards, .areaCard, .statsCards{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.involvedAreas a{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.involvedAreas button{
+    padding:0.8em 1em;
+}
+
+.statsDetail{
+    margin:3em 1em;
+}
+
+.statsCard{
+    padding:1em;
+    box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.8);
+    margin:1em;
+    border-radius: 1em;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+.browse{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10em;
+    padding:5em;
+}
+.browse button{
+    margin-top:0.5em;
+    padding:0.8em 1em;
+}
+
