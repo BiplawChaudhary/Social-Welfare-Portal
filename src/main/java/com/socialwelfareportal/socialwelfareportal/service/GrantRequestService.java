@@ -12,7 +12,7 @@ public interface GrantRequestService {
 
     GrantResponseDto findGrantById(Integer id);
 
-    GrantResponseDto requestForGrant(GrantRequestDto dto);
+    GrantDetails requestForGrant(GrantRequestDto dto);
 
     void cancelTheRequest(Integer id);
 

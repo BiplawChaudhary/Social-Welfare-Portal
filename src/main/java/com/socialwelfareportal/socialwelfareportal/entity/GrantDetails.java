@@ -6,10 +6,10 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
-@Table(name = "" +
-        "grant_details")
+@Table(name = "grant_details")
 @Getter
 @Setter
 public class GrantDetails {
@@ -31,6 +31,9 @@ public class GrantDetails {
     @JoinColumn(name = "user_id")
     private User user;
 
+    @OneToMany(mappedBy = "grantDetails", cascade = CascadeType.ALL)
+    private List<UploadDetails> uploadDetails;
+
     public GrantDetails() {
 
     }
@@ -40,6 +43,7 @@ public class GrantDetails {
         this.description = dto.getDescription();
         this.name = dto.getName();
         this.noOfIndividual = dto.getNoOfIndividual();
+        this.status = Status.pending;
     }
 
 

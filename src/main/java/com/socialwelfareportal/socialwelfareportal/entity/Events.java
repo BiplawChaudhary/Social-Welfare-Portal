@@ -37,4 +37,7 @@ public class Events {
             joinColumns = {@JoinColumn(name="event_id", referencedColumnName = "id")},
             inverseJoinColumns = {@JoinColumn(name = "volunteer_id", referencedColumnName = "id")})
     private List<VolunteerDetails> volunteer;
+
+    @OneToMany(mappedBy = "events", cascade = CascadeType.ALL)
+    private List<UploadDetails> uploadDetails;
 }

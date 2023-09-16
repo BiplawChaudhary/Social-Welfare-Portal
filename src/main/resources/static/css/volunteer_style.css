@@ -1,0 +1,701 @@
+.volunteering,
+.volunteering * {
+  box-sizing: border-box;
+}
+.volun-all{
+    font-family: 'Roboto';
+    margin-left: 2em;
+}
+.volunteering {
+  background: #f5f4f4;
+  width: 1440px;
+  height: 3427px;
+  position: relative;
+  overflow: hidden;
+}
+.footer {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-28 {
+  background: #003893;
+  width: 1440px;
+  height: 476px;
+  position: absolute;
+  left: 0px;
+  top: 2951px;
+}
+.social-welfare-portal {
+  color: #ffffff;
+  text-align: center;
+  font: 500 36px "Roboto", sans-serif;
+  position: absolute;
+  left: 102px;
+  top: 3016px;
+}
+.useful-links {
+  color: #ffffff;
+  text-align: center;
+  font: 500 36px "Roboto", sans-serif;
+  position: absolute;
+  left: 710px;
+  top: 3016px;
+}
+.social-welfare-portal-for-ng-os-is-at-the-forefront-of-ushering-in-a-new-era-of-collaboration-and-efficiency-for-nonprofits-and-ng-os-in-nepal-our-centralized-portal-is-designed-to-be-the-bridge-that-connects-these-vital-organizations-with-essential-resources-and-opportunities {
+  color: #ffffff;
+  text-align: left;
+  font: 400 24px "Roboto", sans-serif;
+  position: absolute;
+  left: 102px;
+  top: 3090px;
+  width: 486px;
+  height: 205px;
+}
+.home-about-contact-login {
+  color: #ffffff;
+  text-align: left;
+  font: 400 24px/205.5% "Roboto", sans-serif;
+  position: absolute;
+  left: 710px;
+  top: 3090px;
+  width: 199px;
+  height: 211px;
+}
+.address {
+  color: #ffffff;
+  text-align: center;
+  font: 500 36px "Roboto", sans-serif;
+  position: absolute;
+  left: 975px;
+  top: 3016px;
+}
+.group-1 {
+  width: 1234.5px;
+  height: 251px;
+  position: static;
+}
+.shantinagar-kathmandu-nepal-977-01-52-xxxxxx-977-01-52-xxxxxx-contact-socialwelfare-com-www-socialwelfareportal-com {
+  color: #ffffff;
+  text-align: left;
+  font: 400 24px/160% "Roboto", sans-serif;
+  position: absolute;
+  left: 975px;
+  top: 3090px;
+  width: 365px;
+  height: 251px;
+}
+.shantinagar-kathmandu-nepal-977-01-52-xxxxxx-977-01-52-xxxxxx-contact-socialwelfare-com-www-socialwelfareportal-com-span {
+  color: #ffffff;
+  font: 400 24px/160% "Roboto", sans-serif;
+}
+.shantinagar-kathmandu-nepal-977-01-52-xxxxxx-977-01-52-xxxxxx-contact-socialwelfare-com-www-socialwelfareportal-com-span2 {
+  color: #ffffff;
+  font: 400 24px/160% "Roboto", sans-serif;
+  text-transform: lowercase;
+}
+.vector-1 {
+  position: absolute;
+  left: 105.5px;
+  top: 3328.5px;
+  overflow: visible;
+}
+.copyright-all-right-reserved-2023-website-by-moon-knight {
+  color: #ffffff;
+  text-align: left;
+  font: 400 24px/160% "Roboto", sans-serif;
+  position: absolute;
+  left: 402px;
+  top: 3363px;
+}
+.vector {
+  position: absolute;
+  left: 953px;
+  top: 3137px;
+  overflow: visible;
+}
+.vector2 {
+  position: absolute;
+  left: 953px;
+  top: 3176px;
+  overflow: visible;
+}
+.vector3 {
+  position: absolute;
+  left: 953px;
+  top: 3255px;
+  overflow: visible;
+}
+.vector4 {
+  position: absolute;
+  left: 953px;
+  top: 3218px;
+  overflow: visible;
+}
+.location {
+  position: absolute;
+  left: 953px;
+  top: 3097px;
+  overflow: visible;
+}
+.completed-events {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-16 {
+  background: #dfdedf;
+  width: 1440px;
+  height: 950px;
+  position: absolute;
+  left: 0px;
+  top: 1950px;
+}
+.square {
+  width: 1058px;
+  height: 621.22px;
+  position: static;
+}
+.rectangle-19 {
+  background: #d9d9d9;
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  left: 1009px;
+  top: 2144.11px;
+}
+.rectangle-17 {
+  background: #d9d9d9;
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  left: 191px;
+  top: 2144.11px;
+}
+.rectangle-20 {
+  background: #d9d9d9;
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  left: 191px;
+  top: 2525.32px;
+}
+.rectangle-18 {
+  background: #d9d9d9;
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  left: 600px;
+  top: 2144.11px;
+}
+.rectangle-22 {
+  background: #d9d9d9;
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  left: 1009px;
+  top: 2525px;
+}
+.rectangle-21 {
+  background: #d9d9d9;
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  left: 600px;
+  top: 2525.32px;
+}
+.event-name {
+  width: 935px;
+  height: 426px;
+  position: static;
+}
+.event-6 {
+  color: #000000;
+  text-align: left;
+  font: 800 36px "Roboto", sans-serif;
+  position: absolute;
+  left: 1065px;
+  top: 2776px;
+}
+.event-5 {
+  color: #000000;
+  text-align: left;
+  font: 800 36px "Roboto", sans-serif;
+  position: absolute;
+  left: 660px;
+  top: 2776px;
+}
+.event-4 {
+  color: #000000;
+  text-align: left;
+  font: 800 36px "Roboto", sans-serif;
+  position: absolute;
+  left: 250px;
+  top: 2776px;
+}
+.event-3 {
+  color: #000000;
+  text-align: left;
+  font: 800 36px "Roboto", sans-serif;
+  position: absolute;
+  left: 1065px;
+  top: 2392px;
+}
+.event-2 {
+  color: #000000;
+  text-align: left;
+  font: 800 36px "Roboto", sans-serif;
+  position: absolute;
+  left: 660px;
+  top: 2392px;
+}
+.event-1 {
+  color: #000000;
+  text-align: left;
+  font: 800 36px "Roboto", sans-serif;
+  position: absolute;
+  left: 251px;
+  top: 2392px;
+}
+.image-in-upcoming {
+  width: 1055px;
+  height: 625px;
+  position: static;
+}
+.unsplash-a-ea-t-unvneik {
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  left: 190px;
+  top: 2143px;
+}
+.unsplash-a-ea-t-unvneik2 {
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  left: 602px;
+  top: 2143px;
+}
+.unsplash-a-ea-t-unvneik3 {
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  left: 1005px;
+  top: 2143px;
+}
+.unsplash-a-ea-t-unvneik4 {
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  left: 1005px;
+  top: 2528px;
+}
+.unsplash-a-ea-t-unvneik5 {
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  left: 602px;
+  top: 2528px;
+}
+.unsplash-a-ea-t-unvneik6 {
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  left: 190px;
+  top: 2528px;
+}
+.completed-events2 {
+  color: #170101;
+  text-align: left;
+  font: 800 36px "Roboto", sans-serif;
+  position: absolute;
+  left: 567px;
+  top: 2004px;
+  width: 309px;
+  height: 39px;
+}
+.join-us {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-23 {
+  background: #dfdedf;
+  width: 1440px;
+  height: 452px;
+  position: absolute;
+  left: 0px;
+  top: 1396px;
+}
+.more-than-2000-volunteers-involved-from-all-over-nepal-join-us-as-a-volunteer {
+  color: #000000;
+  text-align: center;
+  font: 800 42px "Roboto", sans-serif;
+  position: absolute;
+  left: 689px;
+  top: 1450px;
+  width: 726px;
+  height: 215px;
+}
+.rectangle-24 {
+  width: 604px;
+  height: 452px;
+  position: absolute;
+  left: 0px;
+  top: 1396px;
+}
+.btn {
+  width: 249px;
+  height: 91px;
+  position: static;
+}
+.rectangle-25 {
+  background: #003893;
+  border-radius: 32px;
+  width: 249px;
+  height: 91px;
+  position: absolute;
+  left: 886px;
+  top: calc(50% - 13.5px);
+}
+.register {
+  color: #ffffff;
+  text-align: left;
+  font: 800 36px "Roboto", sans-serif;
+  position: absolute;
+  left: 942px;
+  top: 1726px;
+  width: 137px;
+  height: 39.9px;
+}
+.upcoming-events {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-162 {
+  background: #dfdedf;
+  width: 1440px;
+  height: 950px;
+  position: absolute;
+  left: 2px;
+  top: 344px;
+}
+.rectangle-192 {
+  background: #d9d9d9;
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  left: 1011px;
+  top: 538.11px;
+}
+.rectangle-172 {
+  background: #d9d9d9;
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  left: 193px;
+  top: 538.11px;
+}
+.rectangle-202 {
+  background: #d9d9d9;
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  left: 193px;
+  top: 919.32px;
+}
+.rectangle-182 {
+  background: #d9d9d9;
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  left: 602px;
+  top: 538.11px;
+}
+.rectangle-222 {
+  background: #d9d9d9;
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  left: 1011px;
+  top: 919px;
+}
+.rectangle-212 {
+  background: #d9d9d9;
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  left: 602px;
+  top: 919.32px;
+}
+.event-62 {
+  color: #000000;
+  text-align: left;
+  font: 800 36px "Roboto", sans-serif;
+  position: absolute;
+  left: 1067px;
+  top: 1170px;
+}
+.event-52 {
+  color: #000000;
+  text-align: left;
+  font: 800 36px "Roboto", sans-serif;
+  position: absolute;
+  left: 662px;
+  top: 1170px;
+}
+.event-42 {
+  color: #000000;
+  text-align: left;
+  font: 800 36px "Roboto", sans-serif;
+  position: absolute;
+  left: 252px;
+  top: 1170px;
+}
+.event-32 {
+  color: #000000;
+  text-align: left;
+  font: 800 36px "Roboto", sans-serif;
+  position: absolute;
+  left: 1067px;
+  top: 786px;
+}
+.event-22 {
+  color: #000000;
+  text-align: left;
+  font: 800 36px "Roboto", sans-serif;
+  position: absolute;
+  left: 662px;
+  top: 786px;
+}
+.event-12 {
+  color: #000000;
+  text-align: left;
+  font: 800 36px "Roboto", sans-serif;
+  position: absolute;
+  left: 253px;
+  top: 786px;
+}
+.unsplash-a-ea-t-unvneik7 {
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  left: 192px;
+  top: 537px;
+}
+.unsplash-a-ea-t-unvneik8 {
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  left: 604px;
+  top: 537px;
+}
+.unsplash-a-ea-t-unvneik9 {
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  left: 1007px;
+  top: 537px;
+}
+.unsplash-a-ea-t-unvneik10 {
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  left: 1007px;
+  top: 922px;
+}
+.unsplash-a-ea-t-unvneik11 {
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  left: 604px;
+  top: 922px;
+}
+.unsplash-c-atz-h-uz-7-z-8-g {
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  left: 192px;
+  top: 919px;
+}
+.upcoming-events2 {
+  color: #170101;
+  text-align: left;
+  font: 800 36px "Roboto", sans-serif;
+  position: absolute;
+  left: 580px;
+  top: 398.13px;
+  width: 283px;
+  height: 39.19px;
+}
+.header-menu {
+  position: absolute;
+  inset: 0;
+}
+.side-menu {
+  width: 1196px;
+  height: 69px;
+  position: static;
+}
+.rectangle-4 {
+  background: #ffffff;
+  border-radius: 30px;
+  width: 1196px;
+  height: 69px;
+  position: absolute;
+  left: 122px;
+  top: 311px;
+}
+.header-menu2 {
+  width: 778px;
+  height: 36px;
+  position: static;
+}
+.home {
+  color: #003893;
+  text-align: left;
+  font: 800 32px "Roboto", sans-serif;
+  position: absolute;
+  left: 331px;
+  top: 326px;
+  width: 86px;
+  height: 35.57px;
+}
+.about {
+  color: #003893;
+  text-align: left;
+  font: 800 32px "Roboto", sans-serif;
+  position: absolute;
+  left: 554px;
+  top: 326px;
+  width: 87px;
+  height: 35.57px;
+}
+.contact {
+  color: #003893;
+  text-align: left;
+  font: 800 32px "Roboto", sans-serif;
+  position: absolute;
+  left: 778px;
+  top: 326px;
+  width: 113px;
+  height: 35.57px;
+}
+.login {
+  color: #003893;
+  text-align: left;
+  font: 800 32px "Roboto", sans-serif;
+  position: absolute;
+  left: 1028px;
+  top: 326px;
+  width: 81px;
+  height: 35.57px;
+}
+.line-1 {
+  border-style: solid;
+  border-color: #000000;
+  border-width: 2px 0 0 0;
+  width: 36px;
+  height: 0px;
+  position: absolute;
+  left: 453px;
+  top: 326px;
+  transform-origin: 0 0;
+  transform: rotate(90deg) scale(1, 1);
+}
+.line-2 {
+  border-style: solid;
+  border-color: #000000;
+  border-width: 2px 0 0 0;
+  width: 36px;
+  height: 0px;
+  position: absolute;
+  left: 686px;
+  top: 326px;
+  transform-origin: 0 0;
+  transform: rotate(90deg) scale(1, 1);
+}
+.line-3 {
+  border-style: solid;
+  border-color: #003893;
+  border-width: 2px 0 0 0;
+  width: 36px;
+  height: 0px;
+  position: absolute;
+  left: 939px;
+  top: 326px;
+  transform-origin: 0 0;
+  transform: rotate(90deg) scale(1, 1);
+}
+.top-header {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-29 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+.rectangle-30 {
+  background: #003893;
+  width: 467px;
+  height: 85px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.empowering-ngo-enriching-nepal {
+  color: #ffffff;
+  text-align: left;
+  font: 500 26px "Roboto", sans-serif;
+  position: absolute;
+  left: 36px;
+  top: 27px;
+  width: 394px;
+  height: 30px;
+}
+.talk-to-us-977-01-52-xxxxxx {
+  color: #ffffff;
+  text-align: left;
+  font: 400 24px/160% "Roboto", sans-serif;
+  position: absolute;
+  left: 1009px;
+  top: 24px;
+  width: 309px;
+  height: 38px;
+}
+.vector7 {
+  position: absolute;
+  left: 984.08px;
+  top: 34px;
+  overflow: visible;
+}
+.logo {
+  position: absolute;
+  inset: 0;
+}
+.social-welfare-portal-kathmandu-nepal {
+  color: #000000;
+  text-align: center;
+  position: absolute;
+  left: 644px;
+  top: 140px;
+}
+.social-welfare-portal-kathmandu-nepal-span {
+  color: #000000;
+  font: 800 46px/160% "Roboto", sans-serif;
+  text-transform: uppercase;
+}
+.social-welfare-portal-kathmandu-nepal-span2 {
+  color: #000000;
+  font: 700 24px/160% "Roboto", sans-serif;
+}
+.social-welfare-portal-kathmandu-nepal-span3 {
+  color: #000000;
+  font: 700 32px/160% "Roboto", sans-serif;
+}
+.logo-no-background-1 {
+  width: 370px;
+  height: 123px;
+  position: absolute;
+  left: 36px;
+  top: 138px;
+}

@@ -37,4 +37,7 @@ public class NgoDetails{
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     private User user;
 
+    @OneToMany(mappedBy = "ngoDetails", cascade = CascadeType.ALL)
+    private List<UploadDetails> uploadDetails;
+
 }
