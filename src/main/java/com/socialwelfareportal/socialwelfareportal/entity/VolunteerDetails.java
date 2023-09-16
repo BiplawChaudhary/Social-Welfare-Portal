@@ -1,8 +1,18 @@
 package com.socialwelfareportal.socialwelfareportal.entity;
 
+import com.socialwelfareportal.socialwelfareportal.dto.requestdto.VolunteerRequestDto;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.util.List;
 
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name="volunteer_details")
 public class VolunteerDetails {
@@ -27,4 +37,11 @@ public class VolunteerDetails {
 
     @ManyToMany(mappedBy = "volunteer")
     private List<Events> eventsList;
+
+    public VolunteerDetails(VolunteerRequestDto volunteerRequestDto){
+        this.name=volunteerRequestDto.getName();
+        this.address=volunteerRequestDto.getAddress();
+        this.contact=volunteerRequestDto.getContact();
+        this.email=volunteerRequestDto.getEmail();
+    }
 }
