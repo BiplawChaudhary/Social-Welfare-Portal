@@ -4,6 +4,7 @@ import com.socialwelfareportal.socialwelfareportal.dto.requestdto.VolunteerReque
 import com.socialwelfareportal.socialwelfareportal.dto.responsedto.VolunteerResponseDto;
 import com.socialwelfareportal.socialwelfareportal.entity.Events;
 import com.socialwelfareportal.socialwelfareportal.entity.VolunteerDetails;
+import com.socialwelfareportal.socialwelfareportal.repo.EventsRepo;
 import com.socialwelfareportal.socialwelfareportal.repo.VolunteerRepo;
 import com.socialwelfareportal.socialwelfareportal.service.EventService;
 import com.socialwelfareportal.socialwelfareportal.service.VolunteerService;
@@ -17,10 +18,11 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class VolunteerServiceImpl implements VolunteerService {
-    VolunteerRepo volunteerRepo;
+    private final VolunteerRepo volunteerRepo;
 
-    @Autowired
-    EventService eventService;
+
+
+   private final EventService eventService;
     @Override
     public void createVolunteer(VolunteerRequestDto volunteerRequestDto) {
             VolunteerDetails volunteerDetails = new VolunteerDetails();
@@ -28,7 +30,12 @@ public class VolunteerServiceImpl implements VolunteerService {
             volunteerDetails.setAddress(volunteerRequestDto.getAddress());
             volunteerDetails.setContact(volunteerRequestDto.getContact());
             volunteerDetails.setEmail(volunteerRequestDto.getEmail());
-            Events events = eventService.getEventById(volunteerRequestDto.getEvent_id());
+            Integer id = volunteerRequestDto.getEvent_id();
+            System.out.println(id);
+
+
+            Events events = eventService.getEvent(id).get();
+
             List<Events> eventsList = new ArrayList<>();
             eventsList.add(events);
             List<VolunteerDetails> volunteerDetailsList = new ArrayList<>();

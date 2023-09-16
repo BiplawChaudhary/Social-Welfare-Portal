@@ -6,9 +6,10 @@ import com.socialwelfareportal.socialwelfareportal.entity.Events;
 
 import java.text.ParseException;
 import java.util.List;
+import java.util.Optional;
 
 public interface EventService {
-    Events getEventById(Integer id);
+    Optional<Events> getEvent(Integer id);
     void createEvent(EventRequestDto eventRequestDto) throws ParseException;
     List<EventResponseDto> getAllEvents();
 }
