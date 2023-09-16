@@ -54,7 +54,7 @@ public class PaypalController {
 
     @GetMapping(value = CANCEL_URL)
     public String cancelPay() {
-        return "/main/grantrequest/grantrequestform";
+        return "/main/donation/cancelled";
     }
 
     @GetMapping(value = SUCCESS_URL)
@@ -63,7 +63,7 @@ public class PaypalController {
             Payment payment = service.executePayment(paymentId, payerId);
             System.out.println(payment.toJSON());
             if (payment.getState().equals("approved")) {
-                return "/main/index";
+                return "/main/donation/success";
             }
         } catch (PayPalRESTException e) {
             System.out.println(e.getMessage());

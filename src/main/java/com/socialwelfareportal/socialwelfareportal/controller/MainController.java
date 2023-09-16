@@ -30,10 +30,5 @@ public class MainController {
     public String getContactPage(){
         return "/main/home/contact";
     }
-
-    @GetMapping("/donate")
-    public String getDonatePage(){
-        return "/main/home/donate";
-    }
-
+    
 }
