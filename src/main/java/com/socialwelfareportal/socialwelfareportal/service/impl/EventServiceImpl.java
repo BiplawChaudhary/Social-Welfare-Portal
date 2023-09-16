@@ -12,6 +12,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -19,8 +20,8 @@ public class EventServiceImpl implements EventService {
     private final EventsRepo eventsRepo;
 
     @Override
-    public Events getEventById(Integer id) {
-        return eventsRepo.getReferenceById(id);
+    public Optional<Events> getEvent(Integer id) {
+        return eventsRepo.findById(id);
     }
 
     @Override
