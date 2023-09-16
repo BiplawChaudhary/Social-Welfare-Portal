@@ -79,4 +79,11 @@ public class GrantRequestServiceImpl implements GrantRequestService {
 
         return new GrantResponseDto(grantDetailsRepo.save(foundDetails));
     }
+
+
+    //Get the grants of the logged in user.
+    @Override
+    public List<GrantResponseDto> getGrantsOfParticularUser(Integer id) {
+        return null;
+    }
 }

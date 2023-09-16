@@ -17,4 +17,7 @@ public interface GrantRequestService {
     void cancelTheRequest(Integer id);
 
     GrantResponseDto updateTheRequest(Integer id, GrantRequestDto dto);
+
+    List<GrantResponseDto> getGrantsOfParticularUser(Integer id);
+
 }

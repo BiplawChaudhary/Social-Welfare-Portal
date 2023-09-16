@@ -2,6 +2,7 @@ package com.socialwelfareportal.socialwelfareportal.controller;
 
 import com.socialwelfareportal.socialwelfareportal.dto.requestdto.GrantRequestDto;
 import com.socialwelfareportal.socialwelfareportal.entity.UploadDetails;
+import com.socialwelfareportal.socialwelfareportal.repo.UploadDetailsRepo;
 import com.socialwelfareportal.socialwelfareportal.service.impl.GrantRequestServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -29,10 +30,14 @@ public class GrantController {
 
     //Injecting the serviec
     private final GrantRequestServiceImpl grantRequestService;
+    private final UploadDetailsRepo uploadDetailsRepo;
+
+
 
     //Grant Homepage
     @GetMapping("/")
     public String getRegister(){
+
         return "/main/grantrequest/grantController";
     }
 
@@ -45,6 +50,7 @@ public class GrantController {
         return "/main/grantrequest/grantrequestform";
     }
 
+    //Handles the grant request
     @PostMapping("/register")
     public String saveGrantRequest(GrantRequestDto dto, @RequestParam("file")MultipartFile file)
             throws IOException {
@@ -71,6 +77,7 @@ public class GrantController {
             newUpload.setPath(storedImageForThymeleaf);
             newUpload.setSize((int) file.getSize());
             newUpload.setFileType(file.getContentType());
+            uploadDetailsRepo.save(newUpload);
         }
 
         return "redirect:/grant";
