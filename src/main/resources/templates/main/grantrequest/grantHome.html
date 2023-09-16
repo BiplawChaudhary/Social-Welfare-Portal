@@ -1,10 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>GrantHome Page</title>
 </head>
 <body>
-    <h1>Find the Id based on user id</h1>
+    <h1>All Grants</h1>
+<table>
+    <thead>
+    <tr>
+        <td>SN</td>
+        <td>Fiscal Year</td>
+        <td>Name</td>
+        <td>Individuals Covered</td>
+        <td>Description</td>
+        <td>Status</td>
+        <td sec:authorize="hasAuthority('ADMIN')">Approve</td>
+        <td sec:authorize="hasAuthority('ADMIN')">Reject</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="grant,iStat:${grantResponseDtoList}">
+        <td th:text="${iStat.index + 1}"></td>
+        <td th:text="${grant.fiscalYear}"></td>
+        <td th:text="${grant.name}"></td>
+        <td th:text="${grant.description}"></td>
+        <td th:text="${grant.noOfIndividual}"></td>
+        <td th:text="${grant.status}"></td>
+        <td sec:authorize="hasAuthority('ADMIN')"><a th:href="@{/approve/{id}(id=${grant.id})}">Approve</a></td>
+        <td sec:authorize="hasAuthority('ADMIN')"><a th:href="@{/reject/{id}(id=${grant.id})}">Reject</a></td>
+
+
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>
