@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<head>
+    <!--    //Copy the below two lines to every files-->
+    <link rel="stylesheet" href="/css/headerFooter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .project-container:after,.project-container:before{content:"";display:table;clear:both}
+        .project-container{padding:0.01em 16px}
+        .project-row-padding:after,.project-row-padding:before{content:"";display:table;clear:both}
+        .project-row-padding,.project-row-padding>.project-third{padding:0 8px}
+        .project-margin-top{margin-top:16px!important}
+        .project-third{float:left;width:100%}
+        .project-third{width:33.33333%}
+        .project-card{box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)}
+    </style>
+    <title>Social Welfare Portal</title>
+</head>
+<body>
+<!--    HEADER          -->
+<div th:replace="/main/fragments/headerFooter::header"></div>
+
+<main>
+
+    <div class="project-row-padding project-margin-top">
+
+        <div class="project-third">
+            <div class="project-card">
+                <img src="/img/volunteer.jpg" style="width:100%">
+                <div class="project-container">
+                    <h4>Event 1</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-third">
+            <div class="project-card">
+                <img src="/img/volunteer.jpg" style="width:100%">
+                <div class="project-container">
+                    <h4>Event 2</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-third">
+            <div class="project-card">
+                <img src="/img/volunteer.jpg" style="width:100%">
+                <div class="project-container">
+                    <h4>Event 3</h4>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="project-row-padding project-margin-top">
+
+        <div class="project-third">
+            <div class="project-card">
+                <img src="/img/volunteer.jpg" style="width:100%">
+                <div class="project-container">
+                    <h4>Event 4</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-third">
+            <div class="project-card">
+                <img src="/img/volunteer.jpg" style="width:100%">
+                <div class="project-container">
+                    <h4>Event 5</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-third">
+            <div class="project-card">
+                <img src="/img/volunteer.jpg" style="width:100%">
+                <div class="project-container">
+                    <h4>Event 6</h4>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</main>
+
+
+<!--FOOTER-->
+<div th:replace="/main/fragments/headerFooter::footer"></div>
+
+</body>
+
+
+
+
+
+
+<!--****************** Header **************************&ndash;&gt;-->
+<!--<div th:replace="main/fragments/header :: header"-->
+<!--     th:with="allCategory : ${allCategory}, cartValue : ${cartValue} "></div>-->
+</html>
