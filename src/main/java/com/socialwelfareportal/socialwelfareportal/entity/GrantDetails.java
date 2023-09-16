@@ -27,6 +27,8 @@ public class GrantDetails {
 
     private Status status;
 
+    private Integer amount;
+
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
@@ -43,6 +45,7 @@ public class GrantDetails {
         this.description = dto.getDescription();
         this.name = dto.getName();
         this.noOfIndividual = dto.getNoOfIndividual();
+        this.amount=dto.getAmount();
         this.status = Status.pending;
     }
 
