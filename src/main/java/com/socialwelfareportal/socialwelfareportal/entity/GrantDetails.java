@@ -26,6 +26,10 @@ public class GrantDetails {
 
     private Status status;
 
+    public GrantDetails() {
+
+    }
+
     public GrantDetails(GrantRequestDto dto){
         this.fiscalYear = dto.getFiscalYear();
         this.description = dto.getDescription();
@@ -33,7 +37,5 @@ public class GrantDetails {
         this.noOfIndividual = dto.getNoOfIndividual();
     }
 
-    public GrantDetails() {
 
-    }
 }
