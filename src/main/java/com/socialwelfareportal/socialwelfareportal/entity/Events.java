@@ -1,11 +1,16 @@
 package com.socialwelfareportal.socialwelfareportal.entity;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 
 @Entity
 @Table(name = "events")
+@Getter
+@Setter
 public class Events {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
