@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class VolunteerController {
     //Route that returns volunteer for event form
     @GetMapping("/event/register")
-    public String getRegisterPage(){
+    public String getRegisterPage(Model model){
+        VolunteerRequestDto volunteerRequestDto = new VolunteerRequestDto();
+        model.addAttribute("volunteerRequestDto", volunteerRequestDto);
         return "/main/volunteer/register";
     }
 
