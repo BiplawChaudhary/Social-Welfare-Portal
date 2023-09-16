@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -15,13 +17,5 @@ public class VolunteerResponseDto {
     private String address;
     private String contact;
     private String email;
-    private Integer event_id;
-
-    public VolunteerResponseDto(VolunteerDetails dto){
-        this.event_id=this.getEvent_id();
-        this.name=dto.getName();
-        this.address=dto.getAddress();
-        this.contact=dto.getContact();
-        this.email=dto.getEmail();
-    }
+    private List<Integer> event_id;
 }

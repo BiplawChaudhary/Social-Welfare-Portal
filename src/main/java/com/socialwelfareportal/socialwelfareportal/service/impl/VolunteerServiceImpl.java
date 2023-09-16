@@ -1,6 +1,7 @@
 package com.socialwelfareportal.socialwelfareportal.service.impl;
 
 import com.socialwelfareportal.socialwelfareportal.dto.requestdto.VolunteerRequestDto;
+import com.socialwelfareportal.socialwelfareportal.dto.responsedto.VolunteerResponseDto;
 import com.socialwelfareportal.socialwelfareportal.entity.Events;
 import com.socialwelfareportal.socialwelfareportal.entity.VolunteerDetails;
 import com.socialwelfareportal.socialwelfareportal.repo.VolunteerRepo;
@@ -35,5 +36,21 @@ public class VolunteerServiceImpl implements VolunteerService {
             events.setVolunteer(volunteerDetailsList);
             volunteerDetails.setEventsList(eventsList);
             volunteerRepo.save(volunteerDetails);
+    }
+
+    @Override
+    public VolunteerResponseDto getVolunteer(VolunteerDetails volunteerDetails) {
+        VolunteerResponseDto volunteerResponseDto = new VolunteerResponseDto();
+        volunteerResponseDto.setName(volunteerDetails.getName());
+        volunteerResponseDto.setAddress(volunteerDetails.getAddress());
+        volunteerResponseDto.setContact(volunteerDetails.getContact());
+        volunteerResponseDto.setEmail(volunteerDetails.getEmail());
+        List<Events> eventsList = volunteerDetails.getEventsList();
+        List<Integer> event_id = new ArrayList<>();
+        for (Events event:eventsList) {
+            Integer id = event.getId();
+            event_id.add(id);
+        }
+        return volunteerResponseDto;
     }
 }
