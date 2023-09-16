@@ -15,7 +15,7 @@ public class Donation {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    private Date date;
+    private String date;
 
     private String donor;
 
