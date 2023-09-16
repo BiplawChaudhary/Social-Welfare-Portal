@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Register</title>
+    <title>Title</title>
 </head>
 <body>
 
@@ -10,18 +10,7 @@
 <!--*********************  Header  **************************-->
 <div th:replace="main/fragments/headerFooter :: header"></div>
 
-<form th:action="@{/events/register}" method="post" th:object="${volunteerRequestDto}">
-    <label>Name:</label>
-    <input type="text" th:field="*{name}"><br>
-    <label>Address:</label>
-    <input type="text" th:field="*{address}"><br>
-    <label>Contact:</label>
-    <input type="text" th:field="*{contact}"><br>
-    <label>Email:</label>
-    <input type="text" th:field="*{email}"><br>
-    <button type="submit">Submit</button>
-</form>
-
+<h1>Events</h1>
 
 <!--*********************  Footer  **************************-->
 <div th:replace="main/fragments/headerFooter :: footer"></div>
