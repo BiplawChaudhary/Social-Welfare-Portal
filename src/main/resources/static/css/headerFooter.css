@@ -62,8 +62,8 @@ h2{
     align-items: center;
     box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.5);
     padding:1em;
-    margin:0 3em;
-    border-radius: 2em;
+    border-top:1px solid black;
+    border-bottom:1px solid black;
 }
 
 nav ul{
@@ -91,7 +91,8 @@ nav a:hover{
 }
 
 main{
-    height: 50vh;
+    height: fit-content;
+    width: 100vw;
 }
 
 footer{
@@ -142,6 +143,12 @@ footer h3{
 .copyright{
     padding:1em;
     text-align: center;
+}
+
+.firstPart img{
+    width:100%;
+    margin-top:0.2em;
+    border-radius: 0%;
 }
 
 
