@@ -4,6 +4,7 @@ package com.socialwelfareportal.socialwelfareportal.service.impl;
 import com.socialwelfareportal.socialwelfareportal.dto.requestdto.GrantRequestDto;
 import com.socialwelfareportal.socialwelfareportal.dto.responsedto.GrantResponseDto;
 import com.socialwelfareportal.socialwelfareportal.entity.GrantDetails;
+import com.socialwelfareportal.socialwelfareportal.entity.Status;
 import com.socialwelfareportal.socialwelfareportal.repo.GrantDetailsRepo;
 import com.socialwelfareportal.socialwelfareportal.service.GrantRequestService;
 import lombok.RequiredArgsConstructor;
@@ -78,6 +79,20 @@ public class GrantRequestServiceImpl implements GrantRequestService {
         foundDetails.setNoOfIndividual(dto.getNoOfIndividual());
 
         return new GrantResponseDto(grantDetailsRepo.save(foundDetails));
+    }
+
+    @Override
+    public void approveTheRequest(Integer id, GrantResponseDto dto) {
+        GrantDetails foundDetails = grantDetailsRepo.findById(id).get();
+        foundDetails.setStatus(Status.approved);
+        grantDetailsRepo.save(foundDetails);
+    }
+
+    @Override
+    public void rejectTheRequest(Integer id, GrantResponseDto dto) {
+        GrantDetails foundDetails = grantDetailsRepo.findById(id).get();
+        foundDetails.setStatus(Status.declined);
+        grantDetailsRepo.save(foundDetails);
     }
 
 

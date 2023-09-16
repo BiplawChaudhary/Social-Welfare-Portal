@@ -5,14 +5,12 @@ import com.socialwelfareportal.socialwelfareportal.dto.responsedto.GrantResponse
 import com.socialwelfareportal.socialwelfareportal.entity.GrantDetails;
 import com.socialwelfareportal.socialwelfareportal.entity.UploadDetails;
 import com.socialwelfareportal.socialwelfareportal.repo.UploadDetailsRepo;
+import com.socialwelfareportal.socialwelfareportal.service.GrantRequestService;
 import com.socialwelfareportal.socialwelfareportal.service.impl.GrantRequestServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
@@ -21,6 +19,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.util.List;
 
 @Controller
 @RequiredArgsConstructor
@@ -38,11 +37,25 @@ public class GrantController {
 
     //Grant Homepage
     @GetMapping("/")
-    public String getRegister(){
-
+    public String getRegister(Model model){
+        List<GrantResponseDto> grantResponseDtoList = grantRequestService.getAllGrants();
+        model.addAttribute("grantResponseDtoList", grantResponseDtoList);
         return "/main/grantrequest/grantHome";
     }
 
+    @GetMapping("/approve/{id}")
+    private String approveRequest(@PathVariable Integer id){
+        GrantResponseDto grantResponseDto = grantRequestService.findGrantById(id);
+        grantRequestService.approveTheRequest(id,grantResponseDto);
+        return "redirect:/grant/";
+    }
+
+    @GetMapping("/reject/{id}")
+    private String rejectRequest(@PathVariable Integer id){
+        GrantResponseDto grantResponseDto = grantRequestService.findGrantById(id);
+        grantRequestService.rejectTheRequest(id,grantResponseDto);
+        return "redirect:/grant/";
+    }
 
 
     //Method to get the grantrequest form
@@ -50,7 +63,7 @@ public class GrantController {
     public String getGrantRequestForm(Model model){
         //Adding the blank model
         model.addAttribute("grantdto", new GrantRequestDto());
-        //REturning the page
+        //Returning the page
         return "/main/grantrequest/grantrequestform";
     }
 
@@ -92,7 +105,7 @@ public class GrantController {
             uploadDetailsRepo.save(newUpload);
         }
 
-        return "redirect:/grant";
+        return "redirect:/grant/";
 
     }
 }
