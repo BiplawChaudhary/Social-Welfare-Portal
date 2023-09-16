@@ -48,10 +48,10 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http)throws Exception{
         http.csrf().disable();
         http.authorizeRequests()
-                .antMatchers("/","/grant/**", "/login", "/sign-up", "/search" , "/static/**", "/forgot-password/**").permitAll()
+                .antMatchers("/","/grant/**", "/login", "/sign-up", "/search" , "/static/**", "/css/**", "/img/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
-                .formLogin().permitAll()
+                .formLogin().loginPage("/login")
                 .defaultSuccessUrl("/", false)
                 .successHandler((request, response, authentication) -> {
                     // Handle success authentication and redirect based on role

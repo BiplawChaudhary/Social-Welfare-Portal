@@ -16,6 +16,24 @@ public class MainController {
         //Pass the value to the index page below this line:
 
         //Returning the main page
-        return "/main/index";
+        return "/main/home/index";
     }
+
+    //Returns the about page
+    @GetMapping("/about")
+    public String getAboutpage(){
+        return "/main/home/about";
+    }
+
+    //Returns the Contatct Page
+    @GetMapping("/contact")
+    public String getContactPage(){
+        return "/main/home/contact";
+    }
+
+    @GetMapping("/donate")
+    public String getDonatePage(){
+        return "/main/home/donate";
+    }
+
 }

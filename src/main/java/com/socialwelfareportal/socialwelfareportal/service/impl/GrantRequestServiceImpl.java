@@ -52,12 +52,12 @@ public class GrantRequestServiceImpl implements GrantRequestService {
 
     //Add a grant request to table.
     @Override
-    public GrantResponseDto requestForGrant(GrantRequestDto dto) {
+    public GrantDetails requestForGrant(GrantRequestDto dto) {
         //Creating a new Grant Request
         GrantDetails newGrantRequest = new GrantDetails(dto);
 
         //Saving the grant details to the table
-        return new GrantResponseDto(grantDetailsRepo.save(newGrantRequest));
+        return grantDetailsRepo.save(newGrantRequest);
     }
 
     //Cancel the grant request

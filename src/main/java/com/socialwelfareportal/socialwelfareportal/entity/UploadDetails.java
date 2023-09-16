@@ -20,5 +20,16 @@ public class UploadDetails {
 
     private String fileType;
 
+    @ManyToOne
+    @JoinColumn(name = "grant_details_id")
+    private GrantDetails grantDetails;
+
+    @ManyToOne
+    @JoinColumn(name = "ngo_details_id")
+    private NgoDetails ngoDetails;
+
+    @ManyToOne
+    @JoinColumn(name = "events_id")
+    private Events events;
 
 }

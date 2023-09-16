@@ -1,6 +1,8 @@
 package com.socialwelfareportal.socialwelfareportal.controller;
 
 import com.socialwelfareportal.socialwelfareportal.dto.requestdto.GrantRequestDto;
+import com.socialwelfareportal.socialwelfareportal.dto.responsedto.GrantResponseDto;
+import com.socialwelfareportal.socialwelfareportal.entity.GrantDetails;
 import com.socialwelfareportal.socialwelfareportal.entity.UploadDetails;
 import com.socialwelfareportal.socialwelfareportal.repo.UploadDetailsRepo;
 import com.socialwelfareportal.socialwelfareportal.service.impl.GrantRequestServiceImpl;
@@ -38,8 +40,10 @@ public class GrantController {
     @GetMapping("/")
     public String getRegister(){
 
-        return "/main/grantrequest/grantController";
+        return "/main/grantrequest/grantHome";
     }
+
+
 
     //Method to get the grantrequest form
     @GetMapping("/register")
@@ -49,6 +53,8 @@ public class GrantController {
         //REturning the page
         return "/main/grantrequest/grantrequestform";
     }
+
+
 
     //Handles the grant request
     @PostMapping("/register")
@@ -73,10 +79,16 @@ public class GrantController {
             //Storing the path and other data's about image in database.
             String storedImageForThymeleaf = "/uploads/" + file.getOriginalFilename();
 
+
+            GrantDetails savedGrant = grantRequestService.requestForGrant(dto);
+
+
             UploadDetails newUpload = new UploadDetails();
             newUpload.setPath(storedImageForThymeleaf);
             newUpload.setSize((int) file.getSize());
+            newUpload.setGrantDetails(savedGrant);
             newUpload.setFileType(file.getContentType());
+
             uploadDetailsRepo.save(newUpload);
         }
 
