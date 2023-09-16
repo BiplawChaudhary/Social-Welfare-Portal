@@ -1,423 +1,181 @@
-.volunteering,
-.volunteering * {
+.login,
+.login * {
   box-sizing: border-box;
 }
-.sall{
-    font-family: 'Roboto';
+.all{
     margin-left: 2.3em;
+    font-family: 'Roboto';
 }
-.volunteering {
+.login {
   background: #f5f4f4;
   width: 1440px;
-  height: 2763px;
+  height: 2321px;
   position: relative;
   overflow: hidden;
 }
-.completed-events {
+.body-section-1 {
   position: absolute;
   inset: 0;
 }
-.rectangle-16 {
-  background: #dfdedf;
+.img-1 {
   width: 1440px;
-  height: 815px;
-  position: absolute;
-  left: 2px;
-  top: 1530px;
-}
-.square {
-  width: 1058px;
-  height: 621.22px;
-  position: static;
-}
-.rectangle-19 {
-  background: #d9d9d9;
-  width: 240px;
-  height: 240px;
-  position: absolute;
-  left: 1011px;
-  top: 1724.11px;
-}
-.rectangle-17 {
-  background: #d9d9d9;
-  width: 240px;
-  height: 240px;
-  position: absolute;
-  left: 193px;
-  top: 1724.11px;
-}
-.rectangle-20 {
-  background: #d9d9d9;
-  width: 240px;
-  height: 240px;
-  position: absolute;
-  left: 193px;
-  top: 2105.32px;
-}
-.rectangle-18 {
-  background: #d9d9d9;
-  width: 240px;
-  height: 240px;
-  position: absolute;
-  left: 602px;
-  top: 1724.11px;
-}
-.rectangle-22 {
-  background: #d9d9d9;
-  width: 240px;
-  height: 240px;
-  position: absolute;
-  left: 1011px;
-  top: 2105px;
-}
-.rectangle-21 {
-  background: #d9d9d9;
-  width: 240px;
-  height: 240px;
-  position: absolute;
-  left: 602px;
-  top: 2105.32px;
-}
-.event-name {
-  width: 935px;
-  height: 412px;
-  position: static;
-}
-.event-6 {
-  color: #000000;
-  text-align: left;
-  font: 800 24px "Roboto", sans-serif;
-  position: absolute;
-  left: 1094px;
-  top: 2265px;
-  width: 84px;
-}
-.event-5 {
-  color: #000000;
-  text-align: left;
-  font: 800 24px "Roboto", sans-serif;
-  position: absolute;
-  left: 671px;
-  top: 2265px;
-  width: 84px;
-}
-.event-4 {
-  color: #000000;
-  text-align: left;
-  font: 800 24px "Roboto", sans-serif;
-  position: absolute;
-  left: 243px;
-  top: 2265px;
-  width: 84px;
-}
-.event-3 {
-  color: #000000;
-  text-align: left;
-  font: 800 24px "Roboto", sans-serif;
-  position: absolute;
-  left: 1094px;
-  top: 1881px;
-  width: 84px;
-}
-.event-2 {
-  color: #000000;
-  text-align: left;
-  font: 800 24px "Roboto", sans-serif;
-  position: absolute;
-  left: 671px;
-  top: 1881px;
-  width: 84px;
-}
-.event-1 {
-  color: #000000;
-  text-align: left;
-  font: 800 24px "Roboto", sans-serif;
-  position: absolute;
-  left: 244px;
-  top: 1881px;
-  width: 84px;
-}
-.image-in-upcoming {
-  width: 1055px;
-  height: 625px;
-  position: static;
-}
-.unsplash-a-ea-t-unvneik {
-  width: 240px;
-  height: 240px;
-  position: absolute;
-  left: 186px;
-  top: 1625px;
-}
-.unsplash-a-ea-t-unvneik2 {
-  width: 240px;
-  height: 240px;
-  position: absolute;
-  left: 598px;
-  top: 1625px;
-}
-.unsplash-a-ea-t-unvneik3 {
-  width: 240px;
-  height: 240px;
-  position: absolute;
-  left: 1001px;
-  top: 1625px;
-}
-.unsplash-a-ea-t-unvneik4 {
-  width: 240px;
-  height: 240px;
-  position: absolute;
-  left: 1001px;
-  top: 2010px;
-}
-.unsplash-a-ea-t-unvneik5 {
-  width: 240px;
-  height: 240px;
-  position: absolute;
-  left: 598px;
-  top: 2010px;
-}
-.unsplash-a-ea-t-unvneik6 {
-  width: 240px;
-  height: 240px;
-  position: absolute;
-  left: 186px;
-  top: 2010px;
-}
-.completed-events2 {
-  color: #170101;
-  text-align: left;
-  font: 800 24px "Roboto", sans-serif;
-  position: absolute;
-  left: 611px;
-  top: 1558px;
-  width: 213px;
-  height: 39px;
-}
-.join-us {
-  position: absolute;
-  inset: 0;
-}
-.rectangle-23 {
-  background: #dfdedf;
-  border-radius: 32px;
-  width: 1196px;
-  height: 382px;
-  position: absolute;
-  left: 124px;
-  top: 1111px;
-}
-.more-than-2000-volunteers-involved-from-all-over-nepal-join-us-as-a-volunteer {
-  color: #000000;
-  text-align: center;
-  font: 700 32px "Roboto", sans-serif;
-  position: absolute;
-  left: 672px;
-  top: 1158px;
-  width: 616.69px;
-  height: 215px;
-}
-.rectangle-24 {
-  width: 477.02px;
-  height: 382px;
-  position: absolute;
-  left: 124.98px;
-  top: 1111px;
-}
-.btn {
-  width: 211.46px;
-  height: 65px;
-  position: static;
-}
-.rectangle-25 {
-  background: #003893;
-  border-radius: 32px;
-  width: 211.46px;
-  height: 65px;
-  position: absolute;
-  left: 874px;
-  top: calc(50% - 60.5px);
-}
-.register {
-  color: #ffffff;
-  text-align: left;
-  font: 700 24px "Roboto", sans-serif;
-  position: absolute;
-  left: 934px;
-  top: 1342px;
-  width: 91.47px;
-  height: 40px;
-}
-.upcoming-events {
-  position: absolute;
-  inset: 0;
-}
-.rectangle-162 {
-  background: #dfdedf;
-  width: 1440px;
-  height: 837px;
+  height: 719px;
+  opacity: 50%;
   position: absolute;
   left: 0px;
-  top: 237px;
+  top: 226px;
 }
-.rectangle-192 {
-  background: #d9d9d9;
-  width: 240px;
-  height: 240px;
+.join-our-social-welfare-portal-log-in-or-register-now {
+  color: #000000;
+  text-align: center;
+  font: 800 42px "Roboto", sans-serif;
   position: absolute;
-  left: 1009px;
-  top: 431.11px;
+  left: calc(50% - 283px);
+  top: calc(50% - 662.5px);
 }
-.rectangle-172 {
-  background: #d9d9d9;
-  width: 240px;
-  height: 240px;
+.login-form {
   position: absolute;
-  left: 191px;
-  top: 431.11px;
+  inset: 0;
 }
-.rectangle-202 {
+.rectangle-33 {
   background: #d9d9d9;
-  width: 240px;
-  height: 240px;
+  border-radius: 35px;
+  width: 959px;
+  height: 917px;
   position: absolute;
-  left: 191px;
-  top: 812.32px;
+  left: 240px;
+  top: 979px;
 }
-.rectangle-182 {
-  background: #d9d9d9;
-  width: 240px;
-  height: 240px;
+.login2 {
+  color: #000000;
+  text-align: center;
+  font: 800 36px "Roboto", sans-serif;
   position: absolute;
-  left: 600px;
-  top: 431.11px;
+  left: calc(50% - 94px);
+  top: 1041px;
 }
-.rectangle-222 {
-  background: #d9d9d9;
-  width: 240px;
-  height: 240px;
-  position: absolute;
-  left: 1009px;
-  top: 812px;
-}
-.rectangle-212 {
-  background: #d9d9d9;
-  width: 240px;
-  height: 240px;
-  position: absolute;
-  left: 600px;
-  top: 812.32px;
-}
-.event-name2 {
-  width: 912px;
-  height: 412px;
+.group-6 {
+  width: 722px;
+  height: 490px;
   position: static;
 }
-.event-62 {
+.enter-your-registration-number {
+  color: #646464;
+  text-align: left;
+  font: 400 16px/160% "Roboto", sans-serif;
+  position: absolute;
+  left: 400px;
+  top: 1248px;
+  width: 263px;
+}
+.registration-no {
   color: #000000;
-  text-align: left;
-  font: 800 24px "Roboto", sans-serif;
+  text-align: center;
+  font: 300 24px "Roboto", sans-serif;
   position: absolute;
-  left: 1085.48px;
-  top: 990px;
-  width: 81.52px;
+  left: 353px;
+  top: 1152px;
+  width: 197px;
 }
-.event-52 {
+.password {
   color: #000000;
+  text-align: center;
+  font: 300 24px "Roboto", sans-serif;
+  position: absolute;
+  left: 361px;
+  top: 1357px;
+  width: 123px;
+}
+.forgot-password {
+  color: #0b58d5;
+  text-align: center;
+  font: 400 16px "Roboto", sans-serif;
+  position: absolute;
+  left: 939px;
+  top: 1533px;
+}
+.line-4 {
+  border-style: solid;
+  border-color: #0b58d5;
+  border-width: 1px 0 0 0;
+  width: 710px;
+  height: 0px;
+  position: absolute;
+  left: 365px;
+  top: 1297px;
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(1, 1);
+}
+.line-5 {
+  border-style: solid;
+  border-color: #0b58d5;
+  border-width: 1px 0 0 0;
+  width: 709px;
+  height: 0px;
+  position: absolute;
+  left: 365px;
+  top: 1489px;
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(1, 1);
+}
+.login-btn {
+  width: 710px;
+  height: 62px;
+  position: static;
+}
+.rectangle-34 {
+  background: #003893;
+  border-radius: 35px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  width: 710px;
+  height: 62px;
+  position: absolute;
+  left: calc(50% - 357px);
+  top: 1580px;
+}
+.login3 {
+  color: #ffffff;
+  text-align: center;
+  font: 700 24px "Roboto", sans-serif;
+  text-transform: uppercase;
+  position: absolute;
+  left: calc(50% - 45px);
+  top: 1597px;
+  width: 85px;
+  height: 28px;
+}
+.streamline-interface-user-single-close-geometric-human-person-single-up-user {
+  border-radius: 35px;
+  width: 26px;
+  height: 22px;
+  position: absolute;
+  left: 363px;
+  top: 1250px;
+  overflow: hidden;
+}
+.group {
+  position: absolute;
+  left: 1.52px;
+  top: 0.79px;
+  overflow: visible;
+}
+.enter-your-password {
+  color: #646464;
   text-align: left;
-  font: 800 24px "Roboto", sans-serif;
+  font: 400 16px/160% "Roboto", sans-serif;
   position: absolute;
-  left: 672.79px;
-  top: 990px;
-  width: 81.52px;
+  left: 400px;
+  top: 1444px;
+  width: 174px;
 }
-.event-42 {
-  color: #000000;
-  text-align: left;
-  font: 800 24px "Roboto", sans-serif;
+.carbon-password {
+  border-radius: 35px;
   position: absolute;
-  left: 255px;
-  top: 990px;
-  width: 81.52px;
-}
-.event-32 {
-  color: #000000;
-  text-align: left;
-  font: 800 24px "Roboto", sans-serif;
-  position: absolute;
-  left: 1085.48px;
-  top: 606px;
-  width: 81.52px;
-}
-.event-22 {
-  color: #000000;
-  text-align: left;
-  font: 800 24px "Roboto", sans-serif;
-  position: absolute;
-  left: 672.79px;
-  top: 606px;
-  width: 81.52px;
-}
-.event-12 {
-  color: #000000;
-  text-align: left;
-  font: 800 24px "Roboto", sans-serif;
-  position: absolute;
-  left: 256.02px;
-  top: 606px;
-  width: 81.52px;
-}
-.unsplash-a-ea-t-unvneik7 {
-  width: 240px;
-  height: 240px;
-  position: absolute;
-  left: 186px;
-  top: 355px;
-}
-.unsplash-a-ea-t-unvneik8 {
-  width: 240px;
-  height: 240px;
-  position: absolute;
-  left: 598px;
-  top: 355px;
-}
-.unsplash-a-ea-t-unvneik9 {
-  width: 240px;
-  height: 240px;
-  position: absolute;
-  left: 1001px;
-  top: 355px;
-}
-.unsplash-a-ea-t-unvneik10 {
-  width: 240px;
-  height: 240px;
-  position: absolute;
-  left: 1001px;
-  top: 740px;
-}
-.unsplash-a-ea-t-unvneik11 {
-  width: 240px;
-  height: 240px;
-  position: absolute;
-  left: 598px;
-  top: 740px;
-}
-.unsplash-c-atz-h-uz-7-z-8-g {
-  width: 240px;
-  height: 240px;
-  position: absolute;
-  left: 186px;
-  top: 737px;
-}
-.upcoming-events2 {
-  color: #170101;
-  text-align: left;
-  font: 800 24px "Roboto", sans-serif;
-  position: absolute;
-  left: 638px;
-  top: 286px;
-  width: 202px;
-  height: 39px;
+  left: 363px;
+  top: 1446px;
+  overflow: visible;
 }
 .header {
   position: absolute;
@@ -460,7 +218,6 @@
 .about {
   color: #003893;
   text-align: left;
-  font: 800 24px "Roboto", sans-serif;
   position: absolute;
   left: 457px;
   top: 207px;
@@ -485,7 +242,7 @@
   width: 86px;
   height: 30px;
 }
-.login {
+.login4 {
   color: #003893;
   text-align: left;
   font: 800 24px "Roboto", sans-serif;
@@ -541,7 +298,7 @@
   transform-origin: 0 0;
   transform: rotate(90deg) scale(1, 1);
 }
-.line-4 {
+.line-42 {
   border-style: solid;
   border-color: #003893;
   border-width: 2px 0 0 0;
@@ -617,10 +374,10 @@
   top: 17px;
   width: 209px;
 }
-.vector {
+.vector5 {
   position: absolute;
   left: 1093px;
-  top: 21px;
+  top: 22.58px;
   overflow: visible;
 }
 .footer {
@@ -633,7 +390,7 @@
   height: 390px;
   position: absolute;
   left: 0px;
-  top: 2373px;
+  top: 1931px;
 }
 .social-welfare-portal {
   color: #ffffff;
@@ -641,7 +398,7 @@
   font: 500 24px "Roboto", sans-serif;
   position: absolute;
   left: 122px;
-  top: 2427px;
+  top: 1985px;
 }
 .useful-links {
   color: #ffffff;
@@ -649,7 +406,7 @@
   font: 500 24px "Roboto", sans-serif;
   position: absolute;
   left: 727px;
-  top: 2427px;
+  top: 1985px;
 }
 .social-welfare-portal-for-ng-os-is-at-the-forefront-of-ushering-in-a-new-era-of-collaboration-and-efficiency-for-nonprofits-and-ng-os-in-nepal-our-centralized-portal-is-designed-to-be-the-bridge-that-connects-these-vital-organizations-with-essential-resources-and-opportunities {
   color: #ffffff;
@@ -657,7 +414,7 @@
   font: 400 16px "Roboto", sans-serif;
   position: absolute;
   left: 121px;
-  top: 2492px;
+  top: 2050px;
   width: 365px;
   height: 121px;
 }
@@ -667,7 +424,7 @@
   font: 400 16px/205.5% "Roboto", sans-serif;
   position: absolute;
   left: 730px;
-  top: 2487px;
+  top: 2045px;
   width: 199px;
   height: 134px;
 }
@@ -677,7 +434,7 @@
   font: 500 24px "Roboto", sans-serif;
   position: absolute;
   left: 1095px;
-  top: 2427px;
+  top: 1985px;
 }
 .group-1 {
   width: 1355px;
@@ -690,7 +447,7 @@
   font: 400 16px/160% "Roboto", sans-serif;
   position: absolute;
   left: 1095px;
-  top: 2487px;
+  top: 2045px;
   width: 365px;
   height: 144px;
 }
@@ -703,40 +460,40 @@
   font: 400 16px/160% "Roboto", sans-serif;
   text-transform: lowercase;
 }
-.vector2 {
+.vector6 {
   position: absolute;
   left: 1080px;
-  top: 2521px;
+  top: 2079px;
   overflow: visible;
 }
-.vector3 {
+.vector7 {
   position: absolute;
   left: 1080px;
-  top: 2548px;
+  top: 2106px;
   overflow: visible;
 }
-.vector4 {
+.vector8 {
   position: absolute;
   left: 1080px;
-  top: 2600px;
+  top: 2158px;
   overflow: visible;
 }
-.vector5 {
+.vector9 {
   position: absolute;
   left: 1080px;
-  top: 2574px;
+  top: 2132px;
   overflow: visible;
 }
 .location {
   position: absolute;
   left: 1080px;
-  top: 2491px;
+  top: 2049px;
   overflow: visible;
 }
 .vector-1 {
   position: absolute;
   left: 105px;
-  top: 2653px;
+  top: 2211px;
   overflow: visible;
 }
 .copyright-2080-all-right-reserved-government-of-nepal {
@@ -745,5 +502,5 @@
   font: 400 24px/160% "Roboto", sans-serif;
   position: absolute;
   left: 404px;
-  top: 2690px;
+  top: 2248px;
 }
