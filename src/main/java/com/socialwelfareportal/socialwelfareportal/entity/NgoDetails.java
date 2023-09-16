@@ -5,7 +5,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "ngo_details")
-class NgoDetails{
+public class NgoDetails{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
