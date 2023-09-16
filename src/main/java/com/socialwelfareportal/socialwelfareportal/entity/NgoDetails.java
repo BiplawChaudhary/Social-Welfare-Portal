@@ -26,12 +26,8 @@ class NgoDetails{
     private String contact;
     @Column(name = "email")
     private String email;
-    @Column(name = "password")
-    private String password;
-
     @ManyToMany(mappedBy = "ngos")
     private List<Events> events;
-
     @OneToOne
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     private User user;
