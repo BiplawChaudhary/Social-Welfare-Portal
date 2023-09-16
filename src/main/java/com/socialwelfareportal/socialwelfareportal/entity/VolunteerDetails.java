@@ -1,10 +1,9 @@
 package com.socialwelfareportal.socialwelfareportal.entity;
 
 import com.socialwelfareportal.socialwelfareportal.dto.requestdto.VolunteerRequestDto;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.socialwelfareportal.socialwelfareportal.service.EventService;
+import lombok.*;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.*;
 import java.util.List;
@@ -16,7 +15,6 @@ import java.util.List;
 @Entity
 @Table(name="volunteer_details")
 public class VolunteerDetails {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
@@ -38,10 +36,4 @@ public class VolunteerDetails {
     @ManyToMany(mappedBy = "volunteer")
     private List<Events> eventsList;
 
-    public VolunteerDetails(VolunteerRequestDto volunteerRequestDto){
-        this.name=volunteerRequestDto.getName();
-        this.address=volunteerRequestDto.getAddress();
-        this.contact=volunteerRequestDto.getContact();
-        this.email=volunteerRequestDto.getEmail();
-    }
 }
