@@ -70,7 +70,13 @@ public class GrantRequestServiceImpl implements GrantRequestService {
     //Update the request details
     @Override
     public GrantResponseDto updateTheRequest(Integer id, GrantRequestDto dto) {
+        GrantDetails foundDetails = grantDetailsRepo.findById(id).get();
 
-        return null;
+        foundDetails.setDescription(dto.getDescription());
+        foundDetails.setFiscalYear(dto.getFiscalYear());
+        foundDetails.setName(dto.getName());
+        foundDetails.setNoOfIndividual(dto.getNoOfIndividual());
+
+        return new GrantResponseDto(grantDetailsRepo.save(foundDetails));
     }
 }
