@@ -10,11 +10,11 @@ public class GrantDetails {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    private Date fiscalYear;
+    private String fiscalYear;
 
     private String description;
 
-    private String fields;
+    private String name;
 
     private Integer noOfIndividual;
 

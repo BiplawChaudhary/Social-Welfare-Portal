@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--*********************  Header  **************************-->
+<div th:replace="main/fragments/headerFooter :: header"></div>
+
+<h1>Grant Request Form</h1>
+
+<form>
+<!--    Fiscal year-->
+    <fieldset>
+        <label>Fiscal Year</label>
+        <select>
+            <option>2079/80</option>
+            <option>2078/79</option>
+            <option>2077/78</option>
+        </select>
+    </fieldset>
+
+    <fieldset>
+        <label>Name</label>
+        <input type="text">
+    </fieldset>
+
+    <fieldset>
+        <label>Description</label>
+        <input type="text">
+    </fieldset>
+
+    <fieldset>
+        <label>How many individuals will be affected?</label>
+        <input type="text">
+    </fieldset>
+
+
+</form>
+
+
+<!--*********************  Footer  **************************-->
+<div th:replace="main/fragments/headerFooter :: footer"></div>
+</body>
+</html>
