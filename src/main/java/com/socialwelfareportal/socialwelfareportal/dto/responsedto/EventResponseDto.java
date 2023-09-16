@@ -1,4 +1,4 @@
-package com.socialwelfareportal.socialwelfareportal.dto.requestdto;
+package com.socialwelfareportal.socialwelfareportal.dto.responsedto;
 
 import com.socialwelfareportal.socialwelfareportal.entity.Events;
 import com.socialwelfareportal.socialwelfareportal.entity.NgoDetails;
@@ -15,7 +15,7 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class EventRequestDto {
+public class EventResponseDto {
     private Integer id;
     private String name;
     private String date;
@@ -23,4 +23,14 @@ public class EventRequestDto {
     private String description;
     private List<NgoDetails> ngo;
     private List<VolunteerDetails> volunteers;
+
+    public EventResponseDto(Events events){
+        this.id=events.getId();
+        this.name=events.getName();
+        this.eventLocation=events.getEventLocation();
+        this.description=events.getDescription();
+        this.date = new SimpleDateFormat().format(events.getDatename());
+        this.ngo=events.getNgos();
+        this.volunteers=events.getVolunteer();
+    }
 }
