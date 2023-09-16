@@ -17,4 +17,6 @@ public class GrantDetails {
     private String fields;
 
     private Integer noOfIndividual;
+
+    private Status status;
 }
