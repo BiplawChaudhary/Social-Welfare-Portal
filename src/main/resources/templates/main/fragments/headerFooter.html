@@ -3,216 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <title>Header Footer</title>
-    <link rel="stylesheet" href="/css/landing_style.css">
+    <link rel="stylesheet" href="/css/headerFooter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
 <div th:fragment="header">
-    <!-- ------------------------header------------------------- -->
-    <div class="header">
-        <div class="header-menu">
-            <div class="side-menu">
-                <div class="rectangle-4"></div>
-            </div>
-            <div class="header-menu2">
-                <div class="home"><a th:href="@{/}" style="text-decoration:none; color:inherit;">Home</a></div>
 
-                <div class="about"><a th:href="@{/about}" style="text-decoration:none; color:inherit;">About</a></div>
+    <header>
 
-                <div class="contact"><a th:href="@{/contact}" style="text-decoration:none; color:inherit;">Contact</a></div>
-                <div class="login">Login</div>
-                <div class="login"><a th:href="@{/login}" style="text-decoration:none; color:inherit;">Login</a></div>
-                <div class="donate">Donate</div>
-                <div class="donate"><a th:href="@{/donate}" style="text-decoration:none; color:inherit;">Donate</a></div>
+        <section class="top-header">
+            <h4>Empowering NGO, Enriching Nepal</h4>
+            <h4 class="talkToUs" style="background-color:#0B58D5;"><i class="fa fa-phone" aria-hidden="true" style="margin-right: 0.3em;"></i> Talk to us: +977 01-52xxxxxx</h4>
+        </section>
 
-                <div class="line-1"></div>
-                <div class="line-2"></div>
-                <div class="line-3"></div>
-                <div class="line-4"></div>
-            </div>
-        </div>
-        <div class="top-header">
-            <svg
-                    class="rectangle-29"
-                    width="1440"
-                    height="62"
-                    viewBox="0 0 1440 62"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-            >
-                <path d="M0 0H1440V62H0V0Z" fill="#0B58D5" />
-            </svg>
+        <section class="middle-header">
+            <img src="/img/logo-no-background.png" alt="Logo">
 
-            <div class="rectangle-30"></div>
-            <div class="empowering-ngo-enriching-nepal">
-                Empowering NGO, Enriching Nepal
-            </div>
-            <div class="talk-to-us-977-01-52-xxxxxx">
-                Talk To us:+977-01-52xxxxxx
-            </div>
-            <svg
-                    class="vector16"
-                    width="19"
-                    height="17"
-                    viewBox="0 0 19 17"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-            >
-                <path
-                        d="M3.82111 7.35722C5.34111 10.03 7.79 12.2211 10.7772 13.5811L13.0994 11.5033C13.395 11.2389 13.8067 11.1633 14.1761 11.2672C15.3583 11.6167 16.625 11.8056 17.9444 11.8056C18.2244 11.8056 18.4929 11.9051 18.6908 12.0822C18.8888 12.2593 19 12.4995 19 12.75V16.0556C19 16.306 18.8888 16.5463 18.6908 16.7234C18.4929 16.9005 18.2244 17 17.9444 17C13.1853 17 8.62104 15.3084 5.25581 12.2974C1.89057 9.28644 0 5.20264 0 0.944444C0 0.693962 0.11121 0.453739 0.309165 0.276621C0.50712 0.0995036 0.775605 0 1.05556 0H4.75C5.02995 0 5.29844 0.0995036 5.49639 0.276621C5.69435 0.453739 5.80556 0.693962 5.80556 0.944444C5.80556 2.125 6.01667 3.25833 6.40722 4.31611C6.52333 4.64667 6.43889 5.015 6.14333 5.27944L3.82111 7.35722Z"
-                        fill="white"
-                />
-            </svg>
-        </div>
-        <div class="logo">
-            <div class="social-welfare-portal-kathmandu-nepal">
-          <span
-          ><span class="social-welfare-portal-kathmandu-nepal-span"
-          >Social welfare Portal</span
-          ><span class="social-welfare-portal-kathmandu-nepal-span2"
-          ><br />Kathmandu, Nepal</span
-          ></span
-          >
-            </div>
-            <img class="logo-no-background-1" src="img/logo-no-background.png" />
-        </div>
-    </div>
-    <!-- ------------------header-------------------------------- -->
+            <section class="nameDetails">
+                <h1>SOCIAL WELFARE PORTAL</h1>
+                <h3>Kathmandu, Nepal</h3>
+            </section>
+        </section>
+
+        <section class="bottom-header">
+
+            <nav>
+                <ul>
+                    <li><a th:href="@{/}">Home</a></li>
+                    <li><a th:href="@{/about}">About</a></li>
+                    <li><a th:href="@{/contact}">Contact</a></li>
+                    <li><a th:href="@{/donate}">Dontate</a></li>
+                    <li><a th:href="@{/login}">Login</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+
 </div>
 
 
 
 <div th:fragment="footer">
-    <!-- -----------------------footer---------------------- -->
-    <div class="footer">
-        <div class="rectangle-28"></div>
-        <div class="social-welfare-portal">Social welfare portal</div>
-        <div class="useful-links">Useful Links</div>
-        <div
-                class="social-welfare-portal-for-ng-os-is-at-the-forefront-of-ushering-in-a-new-era-of-collaboration-and-efficiency-for-nonprofits-and-ng-os-in-nepal-our-centralized-portal-is-designed-to-be-the-bridge-that-connects-these-vital-organizations-with-essential-resources-and-opportunities"
-        >
-            Social Welfare Portal for NGOs, is at the forefront of ushering in a
-            new era of collaboration and efficiency for nonprofits and NGOs in
-            Nepal. Our centralized portal is designed to be the bridge that
-            connects these vital organizations with essential resources and
-            opportunities.
-        </div>
-        <div class="home-about-contact-login">
-            <a th:href="@{/}">Home</a><br />
-            <a th:href="@{/about}">About</a><br />
-            <a th:href="@{/contact}">Contact</a><br />
-            <a th:href="@{/login}">Login</a>
-        </div>
-        <div class="address">Address</div>
-        <div class="group-1">
-            <div
-                    class="shantinagar-kathmandu-nepal-977-01-52-xxxxxx-977-01-52-xxxxxx-contact-socialwelfare-com-www-socialwelfareportal-com"
-            >
-            <span
-            ><span
-                    class="shantinagar-kathmandu-nepal-977-01-52-xxxxxx-977-01-52-xxxxxx-contact-socialwelfare-com-www-socialwelfareportal-com-span"
-            >Shantinagar, Kathmandu, Nepal<br />+977-01-52xxxxxx<br />+977-01-52xxxxxx<br /></span
-            ><span
-                    class="shantinagar-kathmandu-nepal-977-01-52-xxxxxx-977-01-52-xxxxxx-contact-socialwelfare-com-www-socialwelfareportal-com-span2"
-            >contact@socialwelfare.com<br />www.socialwelfareportal.com</span
-            ></span
-            >
-            </div>
-            <svg
-                    class="vector"
-                    width="12"
-                    height="13"
-                    viewBox="0 0 12 13"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-            >
-                <path
-                        d="M2.41333 5.62611C3.37333 7.67 4.92 9.34555 6.80667 10.3856L8.27333 8.79667C8.46 8.59444 8.72 8.53667 8.95333 8.61611C9.7 8.88333 10.5 9.02778 11.3333 9.02778C11.5101 9.02778 11.6797 9.10387 11.8047 9.23931C11.9298 9.37475 12 9.55845 12 9.75V12.2778C12 12.4693 11.9298 12.653 11.8047 12.7885C11.6797 12.9239 11.5101 13 11.3333 13C8.32755 13 5.44487 11.7065 3.31946 9.40392C1.19404 7.10139 0 3.97849 0 0.722222C0 0.530677 0.0702379 0.346977 0.195262 0.211534C0.320286 0.076091 0.489856 0 0.666667 0H3C3.17681 0 3.34638 0.076091 3.4714 0.211534C3.59643 0.346977 3.66667 0.530677 3.66667 0.722222C3.66667 1.625 3.8 2.49167 4.04667 3.30056C4.12 3.55333 4.06667 3.835 3.88 4.03722L2.41333 5.62611Z"
-                        fill="white"
-                />
-            </svg>
+    <footer>
+        <section class="info-footer">
+            <h3>Social Welfare Portal</h3>
+            <p>       Social Welfare Portal for NGOs, is at the forefront of ushering in a
+                new era of collaboration and efficiency for nonprofits and NGOs in
+                Nepal. Our centralized portal is designed to be the bridge that
+                connects these vital organizations with essential resources and
+                opportunities.
+            </p>
+        </section>
 
-            <svg
-                    class="vector2"
-                    width="12"
-                    height="12"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-            >
-                <path
-                        d="M2.41333 5.19333C3.37333 7.08 4.92 8.62667 6.80667 9.58667L8.27333 8.12C8.46 7.93333 8.72 7.88 8.95333 7.95333C9.7 8.2 10.5 8.33333 11.3333 8.33333C11.5101 8.33333 11.6797 8.40357 11.8047 8.5286C11.9298 8.65362 12 8.82319 12 9V11.3333C12 11.5101 11.9298 11.6797 11.8047 11.8047C11.6797 11.9298 11.5101 12 11.3333 12C8.32755 12 5.44487 10.806 3.31946 8.68054C1.19404 6.55513 0 3.67245 0 0.666667C0 0.489856 0.0702379 0.320286 0.195262 0.195262C0.320286 0.0702379 0.489856 0 0.666667 0H3C3.17681 0 3.34638 0.0702379 3.4714 0.195262C3.59643 0.320286 3.66667 0.489856 3.66667 0.666667C3.66667 1.5 3.8 2.3 4.04667 3.04667C4.12 3.28 4.06667 3.54 3.88 3.72667L2.41333 5.19333Z"
-                        fill="white"
-                />
-            </svg>
+        <section class="links-footer">
+            <h3>Useful Links</h3>
 
-            <svg
-                    class="vector3"
-                    width="12"
-                    height="12"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-            >
-                <path
-                        d="M8.616 7.2C8.664 6.804 8.7 6.408 8.7 6C8.7 5.592 8.664 5.196 8.616 4.8H10.644C10.74 5.184 10.8 5.586 10.8 6C10.8 6.414 10.74 6.816 10.644 7.2M7.554 10.536C7.914 9.87 8.19 9.15 8.382 8.4H10.152C9.5707 9.40097 8.64847 10.1592 7.554 10.536ZM7.404 7.2H4.596C4.536 6.804 4.5 6.408 4.5 6C4.5 5.592 4.536 5.19 4.596 4.8H7.404C7.458 5.19 7.5 5.592 7.5 6C7.5 6.408 7.458 6.804 7.404 7.2ZM6 10.776C5.502 10.056 5.1 9.258 4.854 8.4H7.146C6.9 9.258 6.498 10.056 6 10.776ZM3.6 3.6H1.848C2.42331 2.59633 3.34488 1.83689 4.44 1.464C4.08 2.13 3.81 2.85 3.6 3.6ZM1.848 8.4H3.6C3.81 9.15 4.08 9.87 4.44 10.536C3.34717 10.159 2.42691 9.40063 1.848 8.4ZM1.356 7.2C1.26 6.816 1.2 6.414 1.2 6C1.2 5.586 1.26 5.184 1.356 4.8H3.384C3.336 5.196 3.3 5.592 3.3 6C3.3 6.408 3.336 6.804 3.384 7.2M6 1.218C6.498 1.938 6.9 2.742 7.146 3.6H4.854C5.1 2.742 5.502 1.938 6 1.218ZM10.152 3.6H8.382C8.19421 2.85687 7.91614 2.13954 7.554 1.464C8.658 1.842 9.576 2.604 10.152 3.6ZM6 0C2.682 0 0 2.7 0 6C0 7.5913 0.632141 9.11742 1.75736 10.2426C2.31451 10.7998 2.97595 11.2417 3.7039 11.5433C4.43185 11.8448 5.21207 12 6 12C7.5913 12 9.11742 11.3679 10.2426 10.2426C11.3679 9.11742 12 7.5913 12 6C12 5.21207 11.8448 4.43185 11.5433 3.7039C11.2417 2.97595 10.7998 2.31451 10.2426 1.75736C9.68549 1.20021 9.02405 0.758251 8.2961 0.456723C7.56815 0.155195 6.78793 0 6 0Z"
-                        fill="#F5F4F4"
-                />
-            </svg>
+            <ul>
+                <li><a th:href="@{/}">Home</a></li>
+                <li><a th:href="@{/about}">About</a></li>
+                <li><a th:href="@{/contact}">Contact</a></li>
+                <li><a th:href="@{/login}">Login</a></li>
+            </ul>
+        </section>
 
-            <svg
-                    class="vector4"
-                    width="12"
-                    height="12"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-            >
-                <path
-                        d="M1.2 12C0.870001 12 0.587401 11.853 0.352201 11.559C0.117001 11.265 -0.000398981 10.912 1.01868e-06 10.5V1.5C1.01868e-06 1.0875 0.117601 0.734251 0.352801 0.440251C0.588001 0.146251 0.870401 -0.000498727 1.2 1.27334e-06H10.8C11.13 1.27334e-06 11.4126 0.147001 11.6478 0.441001C11.883 0.735001 12.0004 1.088 12 1.5V10.5C12 10.9125 11.8824 11.2657 11.6472 11.5597C11.412 11.8537 11.1296 12.0005 10.8 12H1.2ZM6 6.75L1.2 3V10.5H10.8V3L6 6.75ZM6 5.25L10.8 1.5H1.2L6 5.25ZM1.2 3V1.5V10.5V3Z"
-                        fill="white"
-                />
-            </svg>
+        <section class="address-footer">
+            <h3>Address</h3>
+            <p><i class="fa fa-map-marker" aria-hidden="true"></i>Shantinagar, Kathmandu, Nepal</p>
+            <p><i class="fa fa-phone" aria-hidden="true"></i>+977 01-52xxxxxx</p>
+            <p><i class="fa fa-phone" aria-hidden="true"></i>+977 01-52xxxxxx</p>
+            <p><i class="fa fa-envelope-o" aria-hidden="true"></i>contact@socialwelfare.com</p>
+            <p> <i class="fa fa-globe" aria-hidden="true"></i>socialwelfare.com.np</p>
+        </section>
+    </footer>
+    <section class="copyrightSection">
+        <div class="line"></div>
 
-            <svg
-                    class="location"
-                    width="13"
-                    height="17"
-                    viewBox="0 0 13 17"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-            >
-                <path
-                        d="M6.05095 7.55524C7.55365 7.55524 8.77183 6.51447 8.77183 5.23062C8.77183 3.94677 7.55365 2.90601 6.05095 2.90601C4.54826 2.90601 3.33008 3.94677 3.33008 5.23062C3.33008 6.51447 4.54826 7.55524 6.05095 7.55524Z"
-                        stroke="white"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                />
-                <path
-                        d="M11.4935 7.555C9.45282 11.6231 6.05172 16.2723 6.05172 16.2723C6.05172 16.2723 2.65063 11.6231 0.609972 7.555C-1.43069 3.48692 1.97041 0 6.05172 0C10.133 0 13.5341 3.48692 11.4935 7.555Z"
-                        stroke="white"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                />
-            </svg>
-
-            <svg
-                    class="vector-1"
-                    width="1210"
-                    viewBox="0 0 1210 0"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-            >
-                <path d="M0 0H1209.5" stroke="#F5F4F4" stroke-width="2" />
-            </svg>
-        </div>
-        <div class="copyright-2080-all-right-reserved-government-of-nepal">
-            Copyright © 2080 | All Right Reserved | Government of Nepal
-        </div>
-    </div>
-    <!-- -----------------------footer---------------------- -->
+        <p class="copyright">Copyright &copy; 2080 | All Rights Reserved | Government of Nepal</p>
+    </section>
 
 
 </div>
