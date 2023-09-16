@@ -4,8 +4,9 @@ import com.paypal.api.payments.Links;
 import com.paypal.api.payments.Payment;
 import com.paypal.base.rest.PayPalRESTException;
 import com.socialwelfareportal.socialwelfareportal.dto.DonationDto;
-import com.socialwelfareportal.socialwelfareportal.entity.Donation;
+import com.socialwelfareportal.socialwelfareportal.service.DonationService;
 import com.socialwelfareportal.socialwelfareportal.service.PaypalService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,10 +18,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.time.LocalDateTime;
 
 @Controller
+@RequiredArgsConstructor
 public class PaypalController {
 
     @Autowired
-    PaypalService service;
+    private final PaypalService service;
+
+    @Autowired
+    private final DonationService donationService;
 
     public static final String SUCCESS_URL = "pay/success";
     public static final String CANCEL_URL = "pay/cancel";
@@ -39,6 +44,7 @@ public class PaypalController {
             Payment payment = service.createPayment(Double.valueOf(donationDto.getPrice()), donationDto.getCurrency(), donationDto.getMethod(),
                     donationDto.getIntent(), donationDto.getDescription(), "http://localhost:8081/" + CANCEL_URL,
                     "http://localhost:8081/" + SUCCESS_URL);
+            donationService.createDonation(donationDto);
             for(Links link:payment.getLinks()) {
                 if(link.getRel().equals("approval_url")) {
                     return "redirect:"+link.getHref();
