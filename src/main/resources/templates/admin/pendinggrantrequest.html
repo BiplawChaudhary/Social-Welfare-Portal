@@ -379,7 +379,7 @@
               <td th:text="${grant.amount}">Amount</td>
               <td th:text="${grant.status}">Status</td>g
               <td>
-                <a href=""> <button class="btn-outline-primary">View</button></a>
+                <a href=""> <button class="btn-outline-primary">Download</button></a>
                 <a th:href="@{/admin/accept-request/{id}(id = ${grant.id})}"><button class="btn-outline-success">Accept</button></a>
                 <a th:href="@{/admin/decline-request/{id}(id = ${grant.id})}"><button class="btn-outline-danger">Reject</button></a>
               </td>

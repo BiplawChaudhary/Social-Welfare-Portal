@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+<!--    //Copy the below two lines to every files-->
+    <link rel="stylesheet" href="/css/headerFooter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Welfare Portal</title>
+</head>
+<body>
+<!--    HEADER          -->
+    <div th:replace="/main/fragments/headerFooter::header"></div>
+
+    <main>
+
+    </main>
+
+
+<!--FOOTER-->
+    <div th:replace="/main/fragments/headerFooter::footer"></div>
+
+</body>
+
+
+
+
+
+
+<!--****************** Header **************************&ndash;&gt;-->
+<!--<div th:replace="main/fragments/header :: header"-->
+<!--     th:with="allCategory : ${allCategory}, cartValue : ${cartValue} "></div>-->
+</html>
