@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Header Footer</title>
@@ -31,16 +31,20 @@
             <nav>
                 <ul>
                     <li><a th:href="@{/}">Home</a></li>
+                    <li><a th:href="@{/events}">Events</a></li>
+                    <li><a th:href="@{/donate}">Donate</a></li>
+                    <li><a th:href="@{/grant/}">Grants</a></li>
+                    <li><a th:href="@{/track}">Fund Tracker</a></li>
                     <li><a th:href="@{/about}">About</a></li>
                     <li><a th:href="@{/contact}">Contact</a></li>
-                    <li><a th:href="@{/donate}">Donate</a></li>
-                    <li><a th:href="@{/track}">Fund Tracker</a></li>
-
                 </ul>
             </nav>
 
             <section>
-                <a th:href="@{/login}"><button>Login</button></a>
+                <a th:href="@{/login}"><button sec:authorize="isAnonymous()">Login</button></a>
+                <button sec:authorize="isAuthenticated()"><span>Logged in as: <span th:text="${#authentication.name}"></span></span></button>
+                <a th:href="@{/logout}" sec:authorize="isAuthenticated()">
+                    <button>Logout</button></a>
             </section>
         </section>
     </header>
