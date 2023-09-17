@@ -1,0 +1,171 @@
+.about,
+.about * {
+    box-sizing: border-box;
+}
+.about {
+    background: #f5f4f4;
+    width: 1440px;
+    height: 3000px;
+    position: absolute;
+    overflow: hidden;
+}
+.body-section-4 {
+    position: absolute;
+    inset: 0;
+}
+.rectangle-31 {
+    background: #dfdedf;
+    width: 1440px;
+    height: 1681px;
+    position: absolute;
+    left: 0px;
+    top: 1009px;
+}
+.event-2 {
+    width: 1226px;
+    height: 352px;
+    position: static;
+}
+.image-for-event {
+    width: 608px;
+    height: 352px;
+    position: absolute;
+    left: 720px;
+    top: 1463px;
+}
+.description {
+    color: #000000;
+    text-align: left;
+    font: 400 16px "Roboto", sans-serif;
+    position: absolute;
+    left: 102px;
+    top: 1596px;
+    width: 498px;
+    height: 124px;
+}
+.who-we-are {
+    color: #000000;
+    text-align: center;
+    font: 700 24px "Roboto", sans-serif;
+    position: absolute;
+    left: calc(50% - 497px);
+    top: 1543px;
+    width: 256px;
+    height: 43px;
+}
+.event-4 {
+    width: 1236px;
+    height: 352px;
+    position: static;
+}
+.image-for-event2 {
+    width: 608px;
+    height: 352px;
+    position: absolute;
+    left: 730px;
+    top: 2267px;
+}
+.our-impact {
+    color: #000000;
+    text-align: center;
+    font: 700 24px "Roboto", sans-serif;
+    position: absolute;
+    left: calc(50% - 497px);
+    top: 2350px;
+    width: 227px;
+    height: 43px;
+}
+.description2 {
+    color: #000000;
+    text-align: left;
+    font: 400 16px "Roboto", sans-serif;
+    position: absolute;
+    left: 102px;
+    top: 2403px;
+    width: 486px;
+    height: 133px;
+}
+.event-1 {
+    width: 1216px;
+    height: 352px;
+    position: static;
+}
+.image-for-event3 {
+    width: 608px;
+    height: 352px;
+    position: absolute;
+    left: 102px;
+    top: 1061px;
+}
+.description3 {
+    color: #000000;
+    text-align: left;
+    font: 400 16px "Roboto", sans-serif;
+    position: absolute;
+    left: 832px;
+    top: 1195px;
+    width: 486px;
+    height: 135px;
+}
+.our-mission {
+    color: #000000;
+    text-align: left;
+    font: 800 24px "Roboto", sans-serif;
+    position: absolute;
+    left: calc(50% - -280px);
+    top: 1142px;
+    width: 149px;
+    height: 43px;
+}
+.event-3 {
+    width: 1209px;
+    height: 352px;
+    position: static;
+}
+.image-for-event4 {
+    width: 608px;
+    height: 352px;
+    position: absolute;
+    left: 102px;
+    top: 1865px;
+}
+.description4 {
+    color: #000000;
+    text-align: left;
+    font: 400 16px "Roboto", sans-serif;
+    position: absolute;
+    left: 832px;
+    top: 2006px;
+    width: 479px;
+    height: 122px;
+}
+.what-we-do {
+    color: #000000;
+    text-align: center;
+    font: 700 24px "Roboto", sans-serif;
+    position: absolute;
+    left: calc(50% - -233px);
+    top: 1953px;
+    width: 249px;
+    height: 43px;
+}
+.body-section-1 {
+    position: absolute;
+    inset: 0;
+}
+.img-1 {
+    width: 1440px;
+    height: 750px;
+    position: absolute;
+    left: 0px;
+    top: 229px;
+    opacity: 50%;
+}
+.about-us {
+    color: #000000;
+    text-align: left;
+    font: 800 42px "Roboto", sans-serif;
+    position: absolute;
+    left: calc(50% - 87px);
+    top: 579px;
+}
