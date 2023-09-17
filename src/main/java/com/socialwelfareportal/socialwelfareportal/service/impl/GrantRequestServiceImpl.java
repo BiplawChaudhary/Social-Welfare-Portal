@@ -3,9 +3,13 @@ package com.socialwelfareportal.socialwelfareportal.service.impl;
 
 import com.socialwelfareportal.socialwelfareportal.dto.requestdto.GrantRequestDto;
 import com.socialwelfareportal.socialwelfareportal.dto.responsedto.GrantResponseDto;
+import com.socialwelfareportal.socialwelfareportal.entity.Budget;
 import com.socialwelfareportal.socialwelfareportal.entity.GrantDetails;
 import com.socialwelfareportal.socialwelfareportal.entity.Status;
+import com.socialwelfareportal.socialwelfareportal.entity.User;
+import com.socialwelfareportal.socialwelfareportal.repo.BudgetRepo;
 import com.socialwelfareportal.socialwelfareportal.repo.GrantDetailsRepo;
+import com.socialwelfareportal.socialwelfareportal.service.BudgetService;
 import com.socialwelfareportal.socialwelfareportal.service.GrantRequestService;
 import com.socialwelfareportal.socialwelfareportal.service.Others.MiscService;
 import lombok.RequiredArgsConstructor;
@@ -21,6 +25,7 @@ public class GrantRequestServiceImpl implements GrantRequestService {
     //injecting the grant details
     private final GrantDetailsRepo grantDetailsRepo;
     private final MiscService miscService;
+    private final BudgetRepo budgetRepo;
 
     //Returns all grants
     @Override
@@ -86,6 +91,13 @@ public class GrantRequestServiceImpl implements GrantRequestService {
     @Override
     public void approveTheRequest(Integer id) {
         GrantDetails foundDetails = grantDetailsRepo.findById(id).get();
+
+        Budget foundBudget =  budgetRepo.findBySector(foundDetails.getDescription());
+
+        Integer newfund = foundBudget.getFund() - foundDetails.getAmount();
+        foundBudget.setFund(newfund);
+        budgetRepo.save(foundBudget);
+
         foundDetails.setStatus(Status.approved);
         grantDetailsRepo.save(foundDetails);
     }
@@ -131,5 +143,12 @@ public class GrantRequestServiceImpl implements GrantRequestService {
         }
 
         return foundList;
+    }
+
+    @Override
+    public List<GrantDetails> getGrantsOfLoggedInUser() {
+        User user = miscService.getLoggedInUser();
+
+        return grantDetailsRepo.findByUser(user);
     }
 }

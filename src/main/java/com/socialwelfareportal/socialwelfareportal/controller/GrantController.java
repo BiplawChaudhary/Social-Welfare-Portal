@@ -5,7 +5,10 @@ import com.socialwelfareportal.socialwelfareportal.dto.responsedto.GrantResponse
 import com.socialwelfareportal.socialwelfareportal.entity.GrantDetails;
 import com.socialwelfareportal.socialwelfareportal.entity.UploadDetails;
 import com.socialwelfareportal.socialwelfareportal.repo.UploadDetailsRepo;
+import com.socialwelfareportal.socialwelfareportal.service.BudgetService;
 import com.socialwelfareportal.socialwelfareportal.service.GrantRequestService;
+import com.socialwelfareportal.socialwelfareportal.service.Others.MiscService;
+import com.socialwelfareportal.socialwelfareportal.service.impl.BudgetServiceImpl;
 import com.socialwelfareportal.socialwelfareportal.service.impl.GrantRequestServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -32,14 +35,20 @@ public class GrantController {
     //Injecting the serviec
     private final GrantRequestServiceImpl grantRequestService;
     private final UploadDetailsRepo uploadDetailsRepo;
+    private final BudgetService budgetService;
+    private final MiscService miscService;
 
 
 
     //Grant Homepage
     @GetMapping("/")
     public String getRegister(Model model){
-        List<GrantResponseDto> grantResponseDtoList = grantRequestService.getAllGrants();
-        model.addAttribute("grantResponseDtoList", grantResponseDtoList);
+        if(miscService.isUserLoggedIn()){
+            model.addAttribute("allgrant", grantRequestService.getGrantsOfLoggedInUser());
+        }
+
+
+        model.addAttribute("allBudgetSector", budgetService.getAllBudgets());
         return "/main/grantrequest/grantHome";
     }
 
@@ -49,7 +58,9 @@ public class GrantController {
     @GetMapping("/register")
     public String getGrantRequestForm(Model model){
         //Adding the blank model
+        model.addAttribute("allsector", budgetService.getAllBudgets());
         model.addAttribute("grantdto", new GrantRequestDto());
+
         //Returning the page
         return "/main/grantrequest/grantrequestform";
     }

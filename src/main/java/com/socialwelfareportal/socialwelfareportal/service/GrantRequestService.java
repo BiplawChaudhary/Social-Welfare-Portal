@@ -28,4 +28,6 @@ public interface GrantRequestService {
 
     List<GrantResponseDto> getSearchResult(String name);
 
+    List<GrantDetails> getGrantsOfLoggedInUser();
+
 }

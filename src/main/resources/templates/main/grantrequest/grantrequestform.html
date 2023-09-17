@@ -20,7 +20,8 @@
            <section class="form" style="padding-left: 10em">
                <h1>Register for Governnment Aid</h1>
 
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus enim expedita repellat ullam unde. Aut culpa, impedit. Assumenda culpa cupiditate id, in ipsa iure natus nulla officiis sit totam voluptatum!</p>
+
+
 
                <form th:action="@{/grant/register}" method="post" enctype="multipart/form-data" th:object="${grantdto}" style="width: 50em; padding-top: 5em; padding-bottom: 5em">
                    <div class="form-group">
@@ -45,12 +46,17 @@
 
                    <div class="form-group">
                        <label for="exampleInputEmail1">Individuals Covered by the Project: </label>
-                           <input type="text" id="exampleInputEmail1" th:field="*{noOfIndividual}" class="form-control" placeholder="Enter Grant Amount">
+                           <input type="text" id="exampleInputEmail1" th:field="*{noOfIndividual}" class="form-control" placeholder="Enter no of individuals affected by this project..">
                    </div>
 
                    <div class="form-group">
-                       <label for="exampleInputEmail1">Description: </label>
-                       <input type="text" id="exampleInputEmail1" th:field="*{description}" class="form-control" placeholder="Enter Description">
+                       <label for="exampleInputEmail1">Select a sector: </label>
+
+                           <select th:field="*{description}">
+                                <option value="null">All Sectors</option>
+                               <option th:each="each:${allsector}" th:value="${each.sector}" th:text="${each.sector}"></option>
+                           </select>
+
                    </div>
 
                    <div class="form-group">

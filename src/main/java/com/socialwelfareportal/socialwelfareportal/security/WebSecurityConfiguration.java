@@ -48,8 +48,8 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http)throws Exception{
         http.csrf().disable();
         http.authorizeRequests()
-                .antMatchers("/","/grant/**", "/login", "/register", "/sign-up", "/search" , "/static/**", "/css/**", "/img/**").permitAll()
-                .antMatchers("/contact", "/about", "/donate", "/adminAssets/**").permitAll()
+                .antMatchers("/","/grant/","/events/**" ,"/login", "/register", "/sign-up", "/search" , "/static/**", "/css/**", "/img/**").permitAll()
+                .antMatchers("/contact", "/about", "/donate", "/adminAssets/**", "/track").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin().loginPage("/login")
