@@ -7,6 +7,7 @@ import com.socialwelfareportal.socialwelfareportal.entity.GrantDetails;
 import com.socialwelfareportal.socialwelfareportal.entity.Status;
 import com.socialwelfareportal.socialwelfareportal.repo.GrantDetailsRepo;
 import com.socialwelfareportal.socialwelfareportal.service.GrantRequestService;
+import com.socialwelfareportal.socialwelfareportal.service.Others.MiscService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +20,7 @@ public class GrantRequestServiceImpl implements GrantRequestService {
 
     //injecting the grant details
     private final GrantDetailsRepo grantDetailsRepo;
-
+    private final MiscService miscService;
 
     //Returns all grants
     @Override
@@ -57,6 +58,7 @@ public class GrantRequestServiceImpl implements GrantRequestService {
         //Creating a new Grant Request
         GrantDetails newGrantRequest = new GrantDetails(dto);
 
+        newGrantRequest.setUser(miscService.getLoggedInUser());
         //Saving the grant details to the table
         return grantDetailsRepo.save(newGrantRequest);
     }
@@ -82,14 +84,14 @@ public class GrantRequestServiceImpl implements GrantRequestService {
     }
 
     @Override
-    public void approveTheRequest(Integer id, GrantResponseDto dto) {
+    public void approveTheRequest(Integer id) {
         GrantDetails foundDetails = grantDetailsRepo.findById(id).get();
         foundDetails.setStatus(Status.approved);
         grantDetailsRepo.save(foundDetails);
     }
 
     @Override
-    public void rejectTheRequest(Integer id, GrantResponseDto dto) {
+    public void rejectTheRequest(Integer id) {
         GrantDetails foundDetails = grantDetailsRepo.findById(id).get();
         foundDetails.setStatus(Status.declined);
         grantDetailsRepo.save(foundDetails);
@@ -100,5 +102,34 @@ public class GrantRequestServiceImpl implements GrantRequestService {
     @Override
     public List<GrantResponseDto> getGrantsOfParticularUser(Integer id) {
         return null;
+    }
+
+    @Override
+    public List<GrantResponseDto> getpendingGrantRequest() {
+        List<GrantResponseDto> foundList = new ArrayList<>();
+
+        List<GrantDetails> allPending = grantDetailsRepo.findByStatus(Status.pending);
+
+        for(var each: allPending){
+            foundList.add(new GrantResponseDto(each));
+        }
+        if(foundList.size() >0){
+            System.out.println("Found the size.");
+        }
+        return foundList;
+    }
+
+
+    @Override
+    public List<GrantResponseDto> getSearchResult(String name) {
+        List<GrantResponseDto> foundList = new ArrayList<>();
+
+        List<GrantDetails> allPending = grantDetailsRepo.findByNameContainingIgnoreCase(name);
+
+        for(var each: allPending){
+            foundList.add(new GrantResponseDto(each));
+        }
+
+        return foundList;
     }
 }

@@ -18,10 +18,14 @@ public interface GrantRequestService {
 
     GrantResponseDto updateTheRequest(Integer id, GrantRequestDto dto);
 
-    void approveTheRequest(Integer id, GrantResponseDto dto);
+    void approveTheRequest(Integer id);
 
-    void rejectTheRequest(Integer id, GrantResponseDto dto);
+    void rejectTheRequest(Integer id);
 
     List<GrantResponseDto> getGrantsOfParticularUser(Integer id);
+
+    List<GrantResponseDto> getpendingGrantRequest();
+
+    List<GrantResponseDto> getSearchResult(String name);
 
 }
