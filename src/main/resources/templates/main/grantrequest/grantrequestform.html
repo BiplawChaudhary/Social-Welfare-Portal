@@ -16,26 +16,48 @@
         <div th:replace="main/fragments/headerFooter :: header"></div>
 
 
-       <main style="margin:5em 10em">
-           <h1>Register for Governnment Aid</h1>
+       <main>
+           <section class="form" style="padding-left: 10em">
+               <h1>Register for Governnment Aid</h1>
 
-           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus enim expedita repellat ullam unde. Aut culpa, impedit. Assumenda culpa cupiditate id, in ipsa iure natus nulla officiis sit totam voluptatum!</p>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus enim expedita repellat ullam unde. Aut culpa, impedit. Assumenda culpa cupiditate id, in ipsa iure natus nulla officiis sit totam voluptatum!</p>
 
-           <section class="form" style="margin:5em 20em">
-               <form action="" method="">
+               <form th:action="@{/grant/register}" method="post" enctype="multipart/form-data" th:object="${grantdto}" style="width: 50em; padding-top: 5em; padding-bottom: 5em">
                    <div class="form-group">
-                       <label for="exampleInputEmail1">Email address</label>
-                       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                       <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                       <label>Fiscal Year br
+                       <select th:field="*{fiscalYear}">
+                           <option value="2079/80">2079/80</option>
+                           <option value="2078/79">2078/79</option>
+                           <option value="2077/78">2077/78</option>
+                       </select>
+                       </label>
                    </div>
+
                    <div class="form-group">
-                       <label for="exampleInputPassword1">Password</label>
-                       <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                       <label for="exampleInputEmail1">Project Name:</label>
+                       <input type="text" id="exampleInputEmail1" th:field="*{name}" class="form-control" aria-describedby="emailHelp" placeholder="Enter Project Name">
                    </div>
-                   <div class="form-check">
-                       <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                       <label class="form-check-label" for="exampleCheck1">Check me out</label>
+
+                   <div class="form-group">
+                       <label for="exampleInputEmail1">Grant Amount: </label>
+                           <input type="text" id="exampleInputEmail1" th:field="*{amount}" class="form-control" placeholder="Enter Grant Amount">
                    </div>
+
+                   <div class="form-group">
+                       <label for="exampleInputEmail1">Individuals Covered by the Project: </label>
+                           <input type="text" id="exampleInputEmail1" th:field="*{noOfIndividual}" class="form-control" placeholder="Enter Grant Amount">
+                   </div>
+
+                   <div class="form-group">
+                       <label for="exampleInputEmail1">Description: </label>
+                       <input type="text" id="exampleInputEmail1" th:field="*{description}" class="form-control" placeholder="Enter Description">
+                   </div>
+
+                   <div class="form-group">
+                       <label for="exampleInputEmail1">Upload your proposal: </label>
+                       <input type="file" id="exampleInputEmail1" placeholder="Upload your proposol" name="file">
+                   </div>
+
                    <button type="submit" class="btn btn-primary">Submit</button>
                </form>
            </section>

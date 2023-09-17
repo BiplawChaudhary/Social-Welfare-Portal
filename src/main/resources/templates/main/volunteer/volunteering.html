@@ -9,14 +9,140 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        .project-container:after,.project-container:before{content:"";display:table;clear:both}
-        .project-container{padding:0.01em 16px}
-        .project-row-padding:after,.project-row-padding:before{content:"";display:table;clear:both}
-        .project-row-padding,.project-row-padding>.project-third{padding:0 8px}
-        .project-margin-top{margin-top:16px!important}
-        .project-third{float:left;width:100%}
-        .project-third{width:33.33333%}
-        .project-card{box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)}
+        event {
+            --img-scale: 1.001;
+            --title-color: black;
+            --link-icon-translate: -20px;
+            --link-icon-opacity: 0;
+            position: relative;
+            border-radius: 16px;
+            box-shadow: none;
+            background: #fff;
+            transform-origin: center;
+            transition: all 0.4s ease-in-out;
+            overflow: hidden;
+        }
+
+        event a::after {
+            position: absolute;
+            inset-block: 0;
+            inset-inline: 0;
+            cursor: pointer;
+            content: "";
+        }
+
+        /* basic event elements styling */
+        event h2 {
+            margin: 0 0 18px 0;
+            font-family: "Bebas Neue", cursive;
+            font-size: 1.9rem;
+            letter-spacing: 0.06em;
+            color: var(--title-color);
+            transition: color 0.3s ease-out;
+        }
+
+        figure {
+            margin: 0;
+            padding: 0;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+        }
+
+        event img {
+            max-width: 100%;
+            transform-origin: center;
+            transform: scale(var(--img-scale));
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .event-body {
+            padding: 24px;
+        }
+
+        event a {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            color: #28666e;
+        }
+
+        event a:focus {
+            outline: 1px dotted #28666e;
+        }
+
+        event a .icon {
+            min-width: 24px;
+            width: 24px;
+            height: 24px;
+            margin-left: 5px;
+            transform: translateX(var(--link-icon-translate));
+            opacity: var(--link-icon-opacity);
+            transition: all 0.3s;
+        }
+
+        /* using the has() relational pseudo selector to update our custom properties */
+        event:has(:hover, :focus) {
+            --img-scale: 1.1;
+            --title-color: #28666e;
+            --link-icon-translate: 0;
+            --link-icon-opacity: 1;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        .events {
+            display: grid;
+            max-width: 1200px;
+            margin-inline: auto;
+            padding-inline: 24px;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        @media screen and (max-width: 960px) {
+            event {
+                container: card/inline-size;
+            }
+            .event-body p {
+                display: none;
+            }
+        }
+
+        @container card (min-width: 380px) {
+            .event-wrapper {
+                display: grid;
+                grid-template-columns: 100px 1fr;
+                gap: 16px;
+            }
+            .event-body {
+                padding-left: 0;
+            }
+            figure {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+            figure img {
+                height: 100%;
+                aspect-ratio: 1;
+                object-fit: cover;
+            }
+        }
+
+        .sr-only:not(:focus):not(:active) {
+            clip: rect(0 0 0 0);
+            clip-path: inset(50%);
+            height: 1px;
+            overflow: hidden;
+            position: absolute;
+            white-space: nowrap;
+            width: 1px;
+        }
     </style>
     <title>Social Welfare Portal</title>
 </head>
@@ -24,70 +150,70 @@
 <!--    HEADER          -->
 <div th:replace="/main/fragments/headerFooter::header"></div>
 
+<br>
+
 <main>
-
-    <div class="project-row-padding project-margin-top">
-
-        <div class="project-third">
-            <div class="project-card">
-                <img src="/img/volunteer.jpg" style="width:100%">
-                <div class="project-container">
-                    <h4>Event 1</h4>
+    <section class="events">
+        <event>
+            <div class="event-wrapper">
+                <figure>
+                    <img src="/img/volun.jpg" alt="" />
+                </figure>
+                <div class="event-body">
+                    <h2>Sheltering</h2>
+                    <p style="text-align: justify">
+                        Join us for an impactful and heartwarming event as we celebrate the spirit of compassion and community support. We are proud to present "Safe Haven Shelter," an event dedicated to raising awareness and funds for our mission of providing shelter and assistance to those in need.
+                    </p>
+                    <a href="#" class="read-more">
+                        Read more <span class="sr-only">about this is some title</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
                 </div>
             </div>
-        </div>
+        </event>
+        <event>
 
-        <div class="project-third">
-            <div class="project-card">
-                <img src="/img/volunteer.jpg" style="width:100%">
-                <div class="project-container">
-                    <h4>Event 2</h4>
+            <div class="event-wrapper">
+                <figure>
+                    <img src="/img/feeding.png" alt="" />
+                </figure>
+                <div class="event-body">
+                    <h2>Feeding</h2>
+                    <p style="text-align: justify">
+                        Join us for an inspiring and impactful event that aims to alleviate hunger and nourish the spirits of our community members in need. We are proud to present "Nourish the Community," an initiative dedicated to providing warm meals and essential support to those facing food insecurity.
+                    </p>
+                    <a href="#" class="read-more">
+                        Read more <span class="sr-only">about this is some title</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
                 </div>
             </div>
-        </div>
+        </event>
+        <event>
 
-        <div class="project-third">
-            <div class="project-card">
-                <img src="/img/volunteer.jpg" style="width:100%">
-                <div class="project-container">
-                    <h4>Event 3</h4>
+            <div class="event-wrapper">
+                <figure>
+                    <img src="/img/volunteer.jpg" alt="" />
+                </figure>
+                <div class="event-body">
+                    <h2>Educate</h2>
+                    <p style="text-align: justify">
+                        Join us for an inspiring and transformative event that places education at the forefront of positive change. We are proud to present "Empowering Tomorrow's Leaders," an initiative dedicated to advancing education and empowering individuals to reach their full potential.
+                    </p>
+                    <a href="#" class="read-more">
+                        Read more <span class="sr-only">about this is some title</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
                 </div>
             </div>
-        </div>
-
-    </div>
-
-    <div class="project-row-padding project-margin-top">
-
-        <div class="project-third">
-            <div class="project-card">
-                <img src="/img/volunteer.jpg" style="width:100%">
-                <div class="project-container">
-                    <h4>Event 4</h4>
-                </div>
-            </div>
-        </div>
-
-        <div class="project-third">
-            <div class="project-card">
-                <img src="/img/volunteer.jpg" style="width:100%">
-                <div class="project-container">
-                    <h4>Event 5</h4>
-                </div>
-            </div>
-        </div>
-
-        <div class="project-third">
-            <div class="project-card">
-                <img src="/img/volunteer.jpg" style="width:100%">
-                <div class="project-container">
-                    <h4>Event 6</h4>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
+        </event>
+    </section>
 </main>
 
 

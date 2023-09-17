@@ -24,6 +24,8 @@ public class GrantResponseDto {
 
     private Status status;
 
+    private Integer amount;
+
     public GrantResponseDto(GrantDetails dto){
         this.id = dto.getId();
         this.fiscalYear =dto.getFiscalYear();
@@ -31,6 +33,7 @@ public class GrantResponseDto {
         this.name = dto.getName();
         this.noOfIndividual = dto.getNoOfIndividual();
         this.status = dto.getStatus();
+        this.amount= dto.getAmount();
     }
 
 }

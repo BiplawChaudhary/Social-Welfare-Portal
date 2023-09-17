@@ -17,4 +17,5 @@ public class GrantRequestDto {
     private String name;
 
     private Integer noOfIndividual;
+    private Integer amount;
 }
