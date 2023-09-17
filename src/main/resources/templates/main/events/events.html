@@ -58,10 +58,11 @@
         <h2 style="text-align: center;">Completed Events</h2>
         <section class="cards">
 
-            <section class="card">
+            <section class="card" th:each="event:${events}">
                 <img src="/img/volun.jpg" alt="">
-                <h4>Event's Name</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt distinctio eaque sed, impedit suscipit dolores incidunt similique esse laborum eos consequatur voluptas perferendis ut culpa unde expedita doloribus illum tempora.</p>
+                <h4 th:text="${event.name}"></h4>
+                <p th:text="${event.description}"></p><br>
+                <a th:href="@{/events/register/{id}(id=${event.id})}">Volunteer</a>
             </section>
 
             <section class="card">
