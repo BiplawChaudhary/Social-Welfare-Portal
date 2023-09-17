@@ -43,19 +43,6 @@ public class GrantController {
         return "/main/grantrequest/grantHome";
     }
 
-    @GetMapping("/approve/{id}")
-    private String approveRequest(@PathVariable Integer id){
-        GrantResponseDto grantResponseDto = grantRequestService.findGrantById(id);
-        grantRequestService.approveTheRequest(id,grantResponseDto);
-        return "redirect:/grant/";
-    }
-
-    @GetMapping("/reject/{id}")
-    private String rejectRequest(@PathVariable Integer id){
-        GrantResponseDto grantResponseDto = grantRequestService.findGrantById(id);
-        grantRequestService.rejectTheRequest(id,grantResponseDto);
-        return "redirect:/grant/";
-    }
 
 
     //Method to get the grantrequest form
