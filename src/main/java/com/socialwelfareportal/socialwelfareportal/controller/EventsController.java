@@ -18,7 +18,7 @@ import java.text.ParseException;
 @RequiredArgsConstructor
 public class EventsController {
     @Autowired
-    EventService eventService;
+    private final EventService eventService;
 
     //Route that returns events page
     @GetMapping("/events")
