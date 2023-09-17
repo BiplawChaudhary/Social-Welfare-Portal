@@ -1,38 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Add Events</title>
-</head>
-<body>
 
+<head>
+    <title>Create Events</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/headerFooter.css">
+
+</head>
+
+<body>
 
 <!--*********************  Header  **************************-->
 <div th:replace="main/fragments/headerFooter :: header"></div>
 
-<form th:action="@{/events/add}" method="post" th:object="${eventRequestDto}">
-    <label>Event Name:</label>
-    <input type="text" th:field="*{name}"><br>
-    <label>Event Date:</label>
-    <input type="datetime-local" th:field="*{date}"><br>
-    <label>Event Location:</label>
-    <input type="text" th:field="*{eventLocation}"><br>
-    <label>Event Description:</label>
-    <input type="text" th:field="*{description}"><br>
-    <label>Fund:</label>
-    <input type="text" th:field="*{fund}"><br>
-    <button type="submit">Submit</button>
-</form>
+
+<main>
+    <section class="form" style="padding-left: 10em">
+        <h2>Register your events</h2>
+        <form th:action="@{/events/add}" method="post" th:object="${eventRequestDto}" style="width: 50em; padding-top: 5em; padding-bottom: 5em">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Event Name:</label>
+                <input type="text" id="exampleInputEmail1" th:field="*{name}" class="form-control" aria-describedby="emailHelp" placeholder="Enter Event Name">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Event Date: </label>
+                <input type="datetime-local" th:field="*{date}" id="exampleInputEmail1" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Event Location: </label>
+                <input type="text" id="exampleInputEmail1" th:field="*{eventLocation}" class="form-control" placeholder="Enter Event Location">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Description: </label>
+                <input type="text" id="exampleInputEmail1" th:field="*{description}" class="form-control" placeholder="Enter Description">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Fund Amount: </label>
+                <input type="text" class="form-control" th:field="*{fund}" id="exampleInputEmail1" placeholder="Enter Event Fund">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </section>
+</main>
 
 <!--*********************  Footer  **************************-->
 <div th:replace="main/fragments/headerFooter :: footer"></div>
 
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
-
-
-
-
-<!--****************** Header **************************&ndash;&gt;-->
-<!--<div th:replace="main/fragments/header :: header"-->
-<!--     th:with="allCategory : ${allCategory}, cartValue : ${cartValue} "></div>-->
 </html>
