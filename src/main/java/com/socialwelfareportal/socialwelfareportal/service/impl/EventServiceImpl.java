@@ -32,6 +32,7 @@ public class EventServiceImpl implements EventService {
         events.setDatename(dateFormat.parse(eventRequestDto.getDate()));
         events.setEventLocation(eventRequestDto.getEventLocation());
         events.setDescription(eventRequestDto.getDescription());
+        events.setFund(eventRequestDto.getFund());
         events.setVolunteer(eventRequestDto.getVolunteers());
         eventsRepo.save(events);
     }

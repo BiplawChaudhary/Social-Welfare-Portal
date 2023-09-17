@@ -26,6 +26,8 @@ public class Events {
     @Column(name = "description")
     private String description;
 
+    private Integer fund;
+
     @ManyToMany(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
     @JoinTable(name = "ngo_events",
     joinColumns = {@JoinColumn(name="event_id", referencedColumnName = "id")},
