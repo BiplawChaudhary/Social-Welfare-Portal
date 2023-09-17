@@ -5,6 +5,17 @@
     <link rel="stylesheet" href="/css/headerFooter.css">
     <link rel="stylesheet" href="/css/events.css">
     <title>Events</title>
+    <style>
+        .button{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.5);
+            padding:1em;
+            border-top:1px solid black;
+            border-bottom:1px solid black;
+        }
+    </style>
 </head>
 <body>
 
@@ -14,10 +25,21 @@
 
 <br><br>
 <main>
+
+    <button class="button">
+        <a th:href="@{/events/add}">Create Events</a></button>
+
     <section class="upcomingEvent">
         <h2 style="text-align: center;">Upcoming Events</h2>
 
         <section class="cards">
+
+            <section class="card" th:each="event:${events}">
+                <img src="/img/volun.jpg" alt="">
+                <h4 th:text="${event.name}"></h4>
+                <p th:text="${event.description}"></p><br>
+                <a th:href="@{/events/register/{id}(id=${event.id})}">Volunteer</a>
+            </section>
 
             <section class="card">
                 <img src="/img/volun.jpg" alt="">
@@ -57,13 +79,6 @@
     <section class="completedEvent">
         <h2 style="text-align: center;">Completed Events</h2>
         <section class="cards">
-
-            <section class="card" th:each="event:${events}">
-                <img src="/img/volun.jpg" alt="">
-                <h4 th:text="${event.name}"></h4>
-                <p th:text="${event.description}"></p><br>
-                <a th:href="@{/events/register/{id}(id=${event.id})}">Volunteer</a>
-            </section>
 
             <section class="card">
                 <img src="/img/volun.jpg" alt="">
