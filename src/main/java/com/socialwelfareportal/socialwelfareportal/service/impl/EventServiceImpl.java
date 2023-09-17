@@ -28,7 +28,7 @@ public class EventServiceImpl implements EventService {
     public void createEvent(EventRequestDto eventRequestDto) throws ParseException {
         Events events = new Events();
         events.setName(eventRequestDto.getName());
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm");
         events.setDatename(dateFormat.parse(eventRequestDto.getDate()));
         events.setEventLocation(eventRequestDto.getEventLocation());
         events.setDescription(eventRequestDto.getDescription());

@@ -34,7 +34,7 @@
 
         <section class="cards">
 
-            <section class="card" th:each="event:${events}">
+            <section class="card" th:each="event:${currentEvents}">
                 <img src="/img/volun.jpg" alt="">
                 <h4 th:text="${event.name}"></h4>
                 <p th:text="${event.description}"></p><br>
@@ -79,6 +79,13 @@
     <section class="completedEvent">
         <h2 style="text-align: center;">Completed Events</h2>
         <section class="cards">
+
+            <section class="card" th:each="event:${expiredEvents}">
+                <img src="/img/volun.jpg" alt="">
+                <h4 th:text="${event.name}"></h4>
+                <p th:text="${event.description}"></p><br>
+                <a th:href="@{/events/register/{id}(id=${event.id})}">Volunteer</a>
+            </section>
 
             <section class="card">
                 <img src="/img/volun.jpg" alt="">
