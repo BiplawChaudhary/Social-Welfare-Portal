@@ -1,6 +1,9 @@
 package com.socialwelfareportal.socialwelfareportal.controller;
 
 
+import com.socialwelfareportal.socialwelfareportal.repo.DonationRepo;
+import com.socialwelfareportal.socialwelfareportal.repo.EventsRepo;
+import com.socialwelfareportal.socialwelfareportal.repo.GrantDetailsRepo;
 import com.socialwelfareportal.socialwelfareportal.service.DonationService;
 import com.socialwelfareportal.socialwelfareportal.service.NgoDetailsService;
 import lombok.RequiredArgsConstructor;
@@ -15,9 +18,9 @@ public class MainController {
     //Injecting the Services
     private final DonationService donationService;
     private final NgoDetailsService ngoDetailsService;
-
-
-
+    private final DonationRepo donationRepo;
+    private final GrantDetailsRepo grantDetailsRepo;
+    private final EventsRepo eventsRepo;
 
 
     //Route that returns the index page
@@ -43,7 +46,10 @@ public class MainController {
     }
 
     @GetMapping("/track")
-    public String getFundDetails(){
+    public String getFundDetails(Model model){
+        model.addAttribute("donations",donationRepo.findAll());
+        model.addAttribute("grants",grantDetailsRepo.findAll());
+        model.addAttribute("events",eventsRepo.findAll());
         return "/main/home/tracker";
     }
     

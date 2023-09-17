@@ -21,6 +21,7 @@ public class EventResponseDto {
     private String date;
     private String eventLocation;
     private String description;
+    private Integer fund;
     private List<NgoDetails> ngo;
     private List<VolunteerDetails> volunteers;
 
@@ -29,6 +30,7 @@ public class EventResponseDto {
         this.name=events.getName();
         this.eventLocation=events.getEventLocation();
         this.description=events.getDescription();
+        this.fund=events.getFund();
         this.date = new SimpleDateFormat().format(events.getDatename());
         this.ngo=events.getNgos();
         this.volunteers=events.getVolunteer();

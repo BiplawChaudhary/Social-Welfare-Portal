@@ -21,6 +21,7 @@ public class EventRequestDto {
     private String date;
     private String eventLocation;
     private String description;
+    private Integer fund;
     private List<NgoDetails> ngo;
     private List<VolunteerDetails> volunteers;
 }
