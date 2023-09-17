@@ -13,6 +13,9 @@
     margin:1em;
     border-radius: 1em;
 }
+.involvedArea{
+    background-color: beige;
+}
 .cards, .areaCard, .statsCards{
     display: flex;
     justify-content: space-around;

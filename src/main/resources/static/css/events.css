@@ -1,0 +1,40 @@
+.cards{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    gap: 3em;
+    align-items: center;
+    margin:3em;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1em;
+    box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.8);
+    border-radius: 2em;
+}
+
+.card img{
+    width: 50%;
+}
+.card:hover{
+    box-shadow: 2px 2px 2px 1px rgba(0,0,0,1);
+    border:1px solid black;
+}
+
+.volunteerSection{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin:3em;
+    padding:1em;
+    background-color: azure;
+}
+.volunteerSection img{
+    width: 30%;
+}
+.textVolunter{
+    text-align: center;
+}

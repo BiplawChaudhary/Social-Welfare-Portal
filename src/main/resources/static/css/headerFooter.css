@@ -58,12 +58,24 @@ h2{
 
 .bottom-header{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.5);
     padding:1em;
     border-top:1px solid black;
     border-bottom:1px solid black;
+}
+.bottom-header button{
+    padding: 0.5em 1em;
+    background-color: #00245f;
+    color: white;
+    border-radius: 1em;
+}
+.bottom-header button:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+
 }
 
 nav ul{
@@ -148,7 +160,7 @@ footer h3{
 .firstPart img{
     width:100%;
     margin-top:0.2em;
-    border-radius: 0%;
+    border-radius: 0;
 }
 
 

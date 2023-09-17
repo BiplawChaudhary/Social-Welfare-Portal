@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="stylesheet" href="/css/headerFooter.css">
+    <link rel="stylesheet" href="/css/events.css">
+    <title>Events</title>
 </head>
 <body>
 
@@ -10,32 +12,107 @@
 <!--*********************  Header  **************************-->
 <div th:replace="main/fragments/headerFooter :: header"></div>
 
-<h1>All Events</h1>
-<table>
-    <thead>
-    <tr>
-        <th>SN</th>
-        <th>Event Name</th>
-        <th>Date</th>
-        <th>Event Location</th>
-        <th>Description</th>
-        <th>Register</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="event, iStat:${events}">
-        <td th:text="${iStat.index + 1}"></td>
-        <td th:text="${event.name}"></td>
-        <td th:text="${event.date}"></td>
-        <td th:text="${event.eventLocation}"></td>
-        <td th:text="${event.description}"></td>
-        <td><a th:href="@{/events/register/{id}(id=${event.id})}">Volunteer</a></td>
-    </tr>
-    </tbody>
-</table>
+<br><br>
+<main>
+    <section class="upcomingEvent">
+        <h2 style="text-align: center;">Upcoming Events</h2>
+
+        <section class="cards">
+
+            <section class="card">
+                <img src="/img/volun.jpg" alt="">
+                <h4>Event's Name</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt distinctio eaque sed, impedit suscipit dolores incidunt similique esse laborum eos consequatur voluptas perferendis ut culpa unde expedita doloribus illum tempora.</p>
+            </section>
+
+            <section class="card">
+                <img src="/img/volun.jpg" alt="">
+                <h4>Event's Name</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt distinctio eaque sed, impedit suscipit dolores incidunt similique esse laborum eos consequatur voluptas perferendis ut culpa unde expedita doloribus illum tempora.</p>
+            </section>
+
+            <section class="card">
+                <img src="/img/volun.jpg" alt="">
+                <h4>Event's Name</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt distinctio eaque sed, impedit suscipit dolores incidunt similique esse laborum eos consequatur voluptas perferendis ut culpa unde expedita doloribus illum tempora.</p>
+            </section>
+
+            <section class="card">
+                <img src="/img/volun.jpg" alt="">
+                <h4>Event's Name</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt distinctio eaque sed, impedit suscipit dolores incidunt similique esse laborum eos consequatur voluptas perferendis ut culpa unde expedita doloribus illum tempora.</p>
+            </section>
+        </section>
+    </section>
+
+    <section class="volunteerSection">
+        <img src="/img/volunteer.jpg" alt="">
+        <section class="textVolunter">
+            <h1>More than 2000+ volunteers involved from all over Nepal. </h1>
+
+            <h2>Join Us as a Voluntteer. </h2>
+        </section>
+    </section>
+
+    <section class="completedEvent">
+        <h2 style="text-align: center;">Completed Events</h2>
+        <section class="cards">
+
+            <section class="card">
+                <img src="/img/volun.jpg" alt="">
+                <h4>Event's Name</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt distinctio eaque sed, impedit suscipit dolores incidunt similique esse laborum eos consequatur voluptas perferendis ut culpa unde expedita doloribus illum tempora.</p>
+            </section>
+
+            <section class="card">
+                <img src="/img/volun.jpg" alt="">
+                <h4>Event's Name</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt distinctio eaque sed, impedit suscipit dolores incidunt similique esse laborum eos consequatur voluptas perferendis ut culpa unde expedita doloribus illum tempora.</p>
+            </section>
+
+            <section class="card">
+                <img src="/img/volun.jpg" alt="">
+                <h4>Event's Name</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt distinctio eaque sed, impedit suscipit dolores incidunt similique esse laborum eos consequatur voluptas perferendis ut culpa unde expedita doloribus illum tempora.</p>
+            </section>
+
+            <section class="card">
+                <img src="/img/volun.jpg" alt="">
+                <h4>Event's Name</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt distinctio eaque sed, impedit suscipit dolores incidunt similique esse laborum eos consequatur voluptas perferendis ut culpa unde expedita doloribus illum tempora.</p>
+            </section>
+        </section>
+    </section>
+</main>
+
+<!--<h1>All Events</h1>-->
+<!--<table>-->
+<!--    <thead>-->
+<!--    <tr>-->
+<!--        <th>SN</th>-->
+<!--        <th>Event Name</th>-->
+<!--        <th>Date</th>-->
+<!--        <th>Event Location</th>-->
+<!--        <th>Description</th>-->
+<!--        <th>Register</th>-->
+<!--    </tr>-->
+<!--    </thead>-->
+<!--    <tbody>-->
+<!--    <tr th:each="event, iStat:${events}">-->
+<!--        <td th:text="${iStat.index + 1}"></td>-->
+<!--        <td th:text="${event.name}"></td>-->
+<!--        <td th:text="${event.date}"></td>-->
+<!--        <td th:text="${event.eventLocation}"></td>-->
+<!--        <td th:text="${event.description}"></td>-->
+<!--        <td><a th:href="@{/events/register/{id}(id=${event.id})}">Volunteer</a></td>-->
+<!--    </tr>-->
+<!--    </tbody>-->
+<!--</table>-->
 
 <!--*********************  Footer  **************************-->
-<div th:replace="main/fragments/headerFooter :: footer"></div>
+<div th:replace="main/fragments/headerFooter :: footer
+
+"></div>
 
 </body>
 
