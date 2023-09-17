@@ -41,5 +41,10 @@ public class MainController {
     public String getContactPage(){
         return "/main/home/contact";
     }
+
+    @GetMapping("/track")
+    public String getFundDetails(){
+        return "/main/home/tracker";
+    }
     
 }
