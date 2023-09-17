@@ -3,36 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <title>GrantHome Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/headerFooter.css">
 </head>
 <body>
-    <h1>All Grants</h1>
-<table>
-    <thead>
-    <tr>
-        <td>SN</td>
-        <td>Fiscal Year</td>
-        <td>Name</td>
-        <td>Individuals Covered</td>
-        <td>Description</td>
-        <td>Status</td>
-        <td sec:authorize="hasAuthority('ADMIN')">Approve</td>
-        <td sec:authorize="hasAuthority('ADMIN')">Reject</td>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="grant,iStat:${grantResponseDtoList}">
-        <td th:text="${iStat.index + 1}"></td>
-        <td th:text="${grant.fiscalYear}"></td>
-        <td th:text="${grant.name}"></td>
-        <td th:text="${grant.description}"></td>
-        <td th:text="${grant.noOfIndividual}"></td>
-        <td th:text="${grant.status}"></td>
-        <td sec:authorize="hasAuthority('ADMIN')"><a th:href="@{/approve/{id}(id=${grant.id})}">Approve</a></td>
-        <td sec:authorize="hasAuthority('ADMIN')"><a th:href="@{/reject/{id}(id=${grant.id})}">Reject</a></td>
+<!--HEADER -->
+    <div th:replace="/main/fragments/headerFooter :: header"></div>
+
+    <main style="margin-left:5em;">
+            <h3>Wanna help the public? But cannot do it alone. </h3>
+            <h3>Take Help from government.</h3>
+
+        <br>
+<!--        /Display the sectors-->
+        <section class="displaySectors mx-lg-3">
+            <a th:href="@{/grant/register}"><button class="btn-outline-info">Apply For Aid</button></a>
+            <h3>Before Applying know the following aids are available:</h3>
+
+            <div th:if="${allBudgetSector.size() ==0}">
+                <h5 style="color:red;">No Funds are avialable at this moment</h5>
+            </div>
+
+            <div th:if="${allBudgetSector.size() !=0}">
+                <div class="row mx-lg-1">
+                    <div class="col">
+                        <h3>All Budget Sectors</h3>
+                        <!--       //Checck if it all grant request-->
+
+                        <table class="table mx-lg-3">
+                            <thead class="thead-light">
+                            <tr>
+                                <th scope="col">Sector</th>
+                                <th scope="col">Fund Available</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr th:each="each: ${allBudgetSector}">
+
+                                <td th:text="${each.sector}">Fiscal Year</td>
+                                <td th:text="${each.fund}">Name</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
 
 
-    </tr>
-    </tbody>
-</table>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <br><br>
+
+<!--        //Show the grants-->
+        <section th:if="${allgrant.size() != 0}">
+            <!-- Begin Page Content -->
+            <div class="row mx-lg-3">
+                <div class="col">
+                    <h3>All Grant Requests</h3>
+                    <!--       //Checck if it all grant request-->
+
+                    <table class="table mx-lg-3">
+                        <thead class="thead-light">
+                        <tr>
+                            <th scope="col">Fiscal Year</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">No of Individuals</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="grant: ${allgrant}">
+
+                            <td th:text="${grant.fiscalYear}">Fiscal Year</td>
+                            <td th:text="${grant.name}">Name</td>
+                            <td th:text="${grant.description}">Description</td>
+                            <td th:text="${grant.noOfIndividual}">No. of Individuals</td>
+                            <td th:text="${grant.amount}">Amount</td>
+                            <td th:text="${grant.status}">Status</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+<!--Footer-->
+    <div th:replace="/main/fragments/headerFooter :: footer"></div>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 </html>

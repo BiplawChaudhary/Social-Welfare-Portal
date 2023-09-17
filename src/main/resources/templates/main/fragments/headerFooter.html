@@ -42,6 +42,7 @@
 
             <section>
                 <a th:href="@{/login}"><button sec:authorize="isAnonymous()">Login</button></a>
+                <a th:href="@{/register}"><button sec:authorize="isAnonymous()">Register</button></a>
                 <button sec:authorize="isAuthenticated()"><span>Logged in as: <span th:text="${#authentication.name}"></span></span></button>
                 <a th:href="@{/logout}" sec:authorize="isAuthenticated()">
                     <button>Logout</button></a>
