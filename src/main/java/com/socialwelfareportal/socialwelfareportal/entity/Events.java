@@ -23,7 +23,7 @@ public class Events {
     private Date datename;
     @Column(name = "event_location")
     private String eventLocation;
-    @Column(name = "description")
+    @Column(name = "description", length = 1000)
     private String description;
 
     private Integer fund;
