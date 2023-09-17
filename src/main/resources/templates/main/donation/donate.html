@@ -1,26 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
+    <!--    //Copy the below two lines to every files-->
+    <link rel="stylesheet" href="/css/headerFooter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/headerFooter.css">
+
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate</title>
 </head>
 <body>
+<!--    HEADER          -->
+<div th:replace="/main/fragments/headerFooter::header"></div>
+
+<main>
+
+    <section class="form" style="padding-left: 20em">
+        <h2>Donate for a Cause</h2>
+
+        <form th:action="@{/pay}" method="post" th:object="${donationDto}" style="width: 50em; padding-top: 5em; padding-bottom: 5em">
+            <input type="hidden" id="currentDateTime" name="currentDateTime" th:value="${currentDateTime}">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Name:</label>
+                <input type="text" id="exampleInputEmail1" th:field="*{donor}" class="form-control" placeholder="Enter Name">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Contact: </label>
+                <input type="text" id="exampleInputEmail1" th:field="*{phone}" class="form-control" placeholder="Enter Contact Number">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email: </label>
+                <input type="text" id="exampleInputEmail1" th:field="*{email}" class="form-control" placeholder="Enter Email">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Amount: </label>
+                <input type="password" id="exampleInputEmail1" th:field="*{price}" class="form-control" placeholder="Enter Amount">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Donate</button>
+        </form>
+    </section>
+
+</main>
 
 
-<!--*********************  Header  **************************-->
-<div th:replace="main/fragments/headerFooter :: header"></div>
-<form th:action="@{/pay}" method="post" th:object="${donationDto}">
-    <input type="hidden" id="currentDateTime" name="currentDateTime" th:value="${currentDateTime}">
-    <label>Name:</label><input type="text" th:field="*{donor}"><br>
-    <label>Contact:</label><input type="text" th:field="*{phone}"><br>
-    <label>Email:</label><input type="text" th:field="*{email}"><br>
-    <label>Amount:</label><input type="text" th:field="*{price}"><br>
-    <input type="submit" value="Donate">
-</form>
-<!--*********************  Footer  **************************-->
-<div th:replace="main/fragments/headerFooter :: footer"></div>
+<!--FOOTER-->
+<div th:replace="/main/fragments/headerFooter::footer"></div>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 
 </body>
+
+
 
 
 
