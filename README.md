@@ -1,5 +1,5 @@
 # Social Welfare Portal
-This project was developed for TechTrix Hackathon-2023 by Team Moon-Knights.
+This project was developed for <b>TechTrix Hackathon-2023 </b> by Team Moon-Knights.
 The theme of Hackathon was "E-Governance".
 
 ## Description of Project
@@ -18,6 +18,7 @@ This site is managed by the body of government which manages the grants for NGOs
     <li>Grant request/approval process online.</li>
     <li>Platform to search for volunteers in upcoming volunteering events.</li>
     <li>Platform for donation collection.</li>
+    <li>Payment Gateway Integration (Currently Paypal)</li>
 </ol>
 
 
